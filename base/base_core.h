@@ -26,6 +26,7 @@
 #define IsPow2 alib_IsPow2
 #define IsPow2OrZero alib_IsPow2OrZero
 #define ExtractBit alib_ExtractBit
+#define BitField alib_BitField
 // #define Extract8 alib_Extract8
 // #define Extract16 alib_Extract16
 // #define Extract32 alib_Extract32
@@ -40,25 +41,25 @@
 #define Million alib_Million
 #define Billion alib_Billion
 //NOTE: Types
-#define u8;
-#define u16;
-#define u32;
-#define u64;
-#define i8;
-#define i16;
-#define i32;
-#define i64;
-#define b8;
-#define b16;
-#define b32;
-#define b64;
-#define f32;
-#define f64;
-#define void alib_VoidProc(void);
+#define u8 alib_u8;
+#define u16 alib_u16;
+#define u32 alib_u32;
+#define u64 alib_u64;
+#define i8 alib_i8;
+#define i16 alib_i16;
+#define i32 alib_i32;
+#define i64 alib_i64;
+#define b8 alib_b8;
+#define b16 alib_b16;
+#define b32 alib_b32;
+#define b64 alib_b64;
+#define f32 alib_f32;
+#define f64 alib_f64;
+#define VoidProc(void) alib_VoidProc(void);
 //NOTE: Assert
 #define Trap alib_Trap
 #define SourceCodeLocation alib_SourceCodeLocation
-#define SourceLocation alib_SourceLocation 
+#define CallerLocation alib_CallerLocation 
 #define AssertAlways alib_AssertAlways
 #define Assert alib_Assert
 #define InvalidPath alib_InvalidPath
@@ -119,12 +120,14 @@
 #define alib_ArrayCount(a) (sizeof(a)/sizeof(*(a)))
 #define alib_Swap(T,a,b) Statement(t__ = a; a = b; b = t__;)
 
-#if ARCH_64BIT
+#define alib_BitField(pos) (1<<(pos))
+
+#if defined(ARCH_X64)
     #define alib_IntFromPtr(ptr) ((U64)(ptr))
-#elif ARCH_32BIT
+#elif defined(ARCH_X86)
     #define alib_IntFromPtr(ptr) ((U32)(ptr))
 #else
-    #error Missing pointer-to-integer cast for this architecture.
+    #warning Missing pointer-to-integer cast for this architecture.
 #endif
 
 #define alib_PtrFromInt(i) (void*)(i)
@@ -143,21 +146,21 @@
 // #define alib_Extract32(word, pos)  (((word) >> ((pos)*32)) & max_U32)
 
 //NOTE: Type -> Alignment
-#if COMPILER_MSVC
-# define alib_AlignOf(T) __alignof(T)
-#elif COMPILER_CLANG
-# define alib_AlignOf(T) __alignof(T)
-#elif COMPILER_GCC
-# define alib_AlignOf(T) __alignof__(T)
+#if defined(_MSC_VER)
+    #define AlignOf(T) __alignof(T)
+#elif defined(__clang__)
+    #define AlignOf(T) __alignof(T)
+#elif defined(__GNUC__)
+    #define AlignOf(T) __alignof__(T)
 #else
-# error AlignOf not defined for this compiler.
+    #error AlignOf not defined for this compiler.
 #endif
 
 //NOTE: Units
-#define alib_KB(n)  (((U64)(n)) << 10)
-#define alib_MB(n)  (((U64)(n)) << 20)
-#define alib_GB(n)  (((U64)(n)) << 30)
-#define alib_TB(n)  (((U64)(n)) << 40)
+#define alib_KB(n)  (((alib_u64)(n)) << 10)
+#define alib_MB(n)  (((alib_u64)(n)) << 20)
+#define alib_GB(n)  (((alib_u64)(n)) << 30)
+#define alib_TB(n)  (((alib_u64)(n)) << 40)
 #define alib_Thousand(n)   ((n)*1000)
 #define alib_Million(n)    ((n)*1000000)
 #define alib_Billion(n)    ((n)*1000000000)
@@ -171,37 +174,37 @@ typedef int8_t alib_i8;
 typedef int16_t alib_i16;
 typedef int32_t alib_i32;
 typedef int64_t alib_i64;
-typedef i8 alib_b8;
-typedef i16 alib_b16;
-typedef i32 alib_b32;
-typedef i64 alib_b64;
+typedef alib_i8 alib_b8;
+typedef alib_i16 alib_b16;
+typedef alib_i32 alib_b32;
+typedef alib_i64 alib_b64;
 typedef float alib_f32;
 typedef double alib_f64;
 typedef void alib_VoidProc(void);
 
 //NOTE: Asserts
-#if COMPILER_MSVC
-    # define alib_Trap() __debugbreak()
-#elif COMPILER_CLANG || COMPILER_GCC
-    # define alib_Trap() __builtin_trap()
+#if defined(_MSC_VER)
+# define Trap() __debugbreak()
+#elif defined(__clang__)|| defined(__GNUC__)
+# define Trap() __builtin_trap()
 #else
-    # error Unknown trap intrinsic for this compiler.
-    // #define Trap() (*(int*)( 0 ) = 0)
+# error Unknown trap intrinsic for this compiler.
 #endif
 
-typedef struct alib_SourceCodeLocation {
+typedef struct alib_SourceCodeLocation alib_SourceCodeLocation;
+struct alib_SourceCodeLocation {
     char* file;
-    char* line;
-} alib_SourceCodeLocation;
+    int line;
+};
 
-#define alib_SourceLocation ((alib_SourceCodeLocation){__FILE__, __LINE__})
+#define alib_CallerLocation ((alib_SourceCodeLocation){__FILE__, __LINE__})
 
 #define alib_AssertAlways(x) alib_Statement(if(!(x)) {alib_Trap();})
 
-#if BUILD_DEBUG
+#if ALIB_BUILD_DEBUG
     #define alib_Assert(x) alib_AssertAlways(x)
 #else
-    #define alib_Assert(x) (void)(x) #endif
+    #define alib_Assert(x) (void)(x)
 #endif
 
 #define alib_InvalidPath        alib_Assert(!"Invalid Path!")
@@ -236,7 +239,12 @@ typedef struct alib_SourceCodeLocation {
 #define alib_MemoryCopyTyped(d,s,c) alib_MemoryCopy((d),(s),sizeof(*(d))*(c))
 #define alib_MemoryCopyStr8(dst, s) alib_MemoryCopy(dst, (s).str, (s).size)
 
+#ifdef ALIB_BUILD_DEBUG 
+#define alib_MemoryZero(s,z)       memset((s),0xCB,(z))
+#else
 #define alib_MemoryZero(s,z)       memset((s),0,(z))
+#endif
+
 #define alib_MemoryZeroStruct(s)   alib_MemoryZero((s),sizeof(*(s)))
 #define alib_MemoryZeroArray(a)    alib_MemoryZero((a),sizeof(a))
 #define alib_MemoryZeroTyped(m,c)  alib_MemoryZero((m),sizeof(*(m))*(c))
@@ -247,5 +255,19 @@ typedef struct alib_SourceCodeLocation {
 
 #define alib_MemoryRead(T,p,e)    ( ((p)+sizeof(T)<=(e))?(*(T*)(p)):(0) )
 #define alib_MemoryConsume(T,p,e) ( ((p)+sizeof(T)<=(e))?((p)+=sizeof(T),*(T*)((p)-sizeof(T))):((p)=(e),0) )
+
+
+//NOTE: OS Check
+#if defined(_WIN32) || defined(_WIN64)
+    #define ALIB_WIN 1
+#elif defined(__APPLE__) && defined(__MACH__)
+    #if TARGET_OS_MAC && !TARGET_OS_IPHONE
+        #define ALIB_MAC 1
+    #endif
+#elif defined(__linux__)
+    #define ALIB_LINUX 1
+#elif defined(__unix__) || defined(__unix)
+    #define ALIB_UNIX 1
+#endif
 
 #endif
