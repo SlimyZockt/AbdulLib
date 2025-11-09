@@ -5,6 +5,8 @@
 #define BUILD_FOLDER "build/"
 #define SRC_FOLDER ""
 
+#define OUT_FILE "example_1"
+
 int main(int argc, char **argv) {
     NOB_GO_REBUILD_URSELF(argc, argv);
 
@@ -14,14 +16,14 @@ int main(int argc, char **argv) {
 
     nob_cc(&cmd);
     nob_cmd_append(&cmd, "-std=c11", "-g");
-    nob_cc_flags(&cmd);
+    // nob_cc_flags(&cmd);
     nob_cc_inputs(&cmd, SRC_FOLDER "example_1.c");
-    nob_cc_output(&cmd, BUILD_FOLDER "example_1");
+    nob_cc_output(&cmd, BUILD_FOLDER OUT_FILE);
 
     // example_1
     if (!nob_cmd_run(&cmd)) return 1; 
 
-    nob_cmd_append(&cmd, BUILD_FOLDER "main");
+    nob_cmd_append(&cmd, BUILD_FOLDER OUT_FILE);
 
     if (!nob_cmd_run(&cmd)) {
         return 1;

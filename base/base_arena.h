@@ -1,28 +1,58 @@
 #ifndef ALIB_BASE_ARENA_H
 #define ALIB_BASE_ARENA_H
 
-typedef alib_u64 Alib_ArenaFlags;
+#if ALIB_BASE_ARENA_STRIP_PREFIX 
+#define Arena alib_Arena
+#define ArenaFlags alib_ArenaFlags
+#define ArenaParams alib_ArenaParams
+#define ArenaParams alib_ArenaParams
+#define Temp alib_Temp
+#define arena_default_reserve_size alib_arena_default_reserve_size
+#define arena_default_commit_size alib_arena_default_commit_size
+#define arena_default_flags alib_arena_default_flags
+#define arena_alloc_ alib_arena_alloc_
+#define arena_alloc alib_arena_alloc
+#define arena_release alib_arena_release
+#define arena_clear alib_arena_clear
+#define arena_pop alib_arena_pop
+#define arena_pop_to alib_arena_pop_to
+#define arena_push alib_arena_push
+#define arena_pop alib_arena_pop
+#define temp_begin alib_temp_begin
+#define temp_end alib_temp_end
+
+#define push_array alib_push_array
+#define push_array_aligned alib_push_array_aligned
+#define push_array_aligned alib_push_array_no_zero
+#define push_array_no_zero_aligned alib_push_array_no_zero_aligned
+
+#endif
+
+
+
+typedef alib_u64 alib_ArenaFlags;
 enum {
-    Alib_ArenaFlag_NoChain    = alib_BitField(0),
-    Alib_ArenaFlag_LargePages = alib_BitField(1),
+    alib_ArenaFlag_NoChain    = (1<<0),
+    // alib_ArenaFlag_LargePages = alib_BitSet(1),
 };
 
-typedef struct Alib_ArenaParams Alib_ArenaParams;
-struct Alib_ArenaParams {
-    Alib_ArenaFlags flags;
+#define ALIB_ARENA_HEADER_SIZE 128
+typedef struct alib_ArenaParams alib_ArenaParams;
+struct alib_ArenaParams {
+    alib_ArenaFlags flags;
     alib_u64 reserve_size;
     alib_u8 commit_size;
     void *optional_backing_buffer;
     alib_SourceCodeLocation loc;
 };
 
-typedef struct Alib_Arena Alib_Arena;
-struct Alib_Arena {
-    Alib_Arena *prev;    // previous arena in chain
-    Alib_Arena *current; // current arena in chain
-    Alib_Arena *free_last;
+typedef struct alib_Arena alib_Arena;
+struct alib_Arena {
+    alib_Arena *prev;    // previous arena in chain
+    alib_Arena *current; // current arena in chain
+    alib_Arena *free_last;
     alib_u64 free_size;
-    Alib_ArenaFlags flags;
+    alib_ArenaFlags flags;
     alib_u64 cmt_size;
     alib_u64 res_size;
     alib_u64 base_pos;
@@ -32,40 +62,42 @@ struct Alib_Arena {
     alib_SourceCodeLocation loc;
 };
 
-typedef struct Alib_Temp Alib_Temp;
-struct Alib_Temp {
-    Alib_Arena *arena;
+alib_StaticAssert(sizeof(Arena) <= ALIB_ARENA_HEADER_SIZE, arena_header_size_check);
+
+typedef struct alib_Temp alib_Temp;
+struct alib_Temp {
+    alib_Arena *arena;
     alib_u64 pos;
 };
 
 // Arena Functions
 alib_global alib_u64 alib_arena_default_reserve_size = alib_MB(64);
 alib_global alib_u64 alib_arena_default_commit_size  = alib_KB(64);
-alib_global Alib_ArenaFlags alib_arena_default_flags = 0;
+alib_global alib_ArenaFlags alib_arena_default_flags = 0;
 
 //arena creation/destruction
-alib_internal Alib_Arena *arena_alloc_(Alib_ArenaParams *params);
-#define arena_alloc(...) arena_alloc_(&(Alib_ArenaParams){       \
+alib_internal alib_Arena *alib_arena_alloc_(alib_ArenaParams *params);
+#define alib_arena_alloc(...) alib_arena_alloc_(&(alib_ArenaParams){       \
         .reserve_size = alib_arena_default_reserve_size,         \
         .commit_size = alib_arena_default_commit_size,           \
         .flags = alib_arena_default_flags,                       \
         .loc = (alib_CallerLocation),                            \
         __VA_ARGS__})
 
-alib_internal void alib_arena_release(Alib_Arena *arena);
+alib_internal void alib_arena_release(alib_Arena *arena);
 
 // arena push/pop/pos core functions
-alib_internal void     *alib_arena_push(Alib_Arena *arena, alib_u64 size, alib_u64 align);
-alib_internal alib_u64  alib_arena_pos(Alib_Arena *arena);
-alib_internal void      alib_arena_pop_to(Alib_Arena *arena, alib_u64 pos);
+alib_internal void     *alib_arena_push(alib_Arena *arena, alib_u64 size, alib_u64 align);
+alib_internal alib_u64  alib_arena_pos(alib_Arena *arena);
+alib_internal void      alib_arena_pop_to(alib_Arena *arena, alib_u64 pos);
 
 // arena push/pop helpers
-alib_internal void alib_arena_clear(Alib_Arena *arena);
-alib_internal void alib_arena_pop(Alib_Arena *arena, alib_u64 amt);
+alib_internal void alib_arena_clear(alib_Arena *arena);
+alib_internal void alib_arena_pop(alib_Arena *arena, alib_u64 amt);
 
 // temporary arena scopes
-alib_internal Alib_Temp alib_temp_begin(Alib_Arena *arena);
-alib_internal void      alib_temp_end(Alib_Temp temp);
+alib_internal alib_Temp alib_temp_begin(alib_Arena *arena);
+alib_internal void      alib_temp_end(alib_Temp temp);
 
 // push helper macros
 #define alib_push_array_no_zero_aligned(a, T, c, align) (T *)alib_arena_push((a), sizeof(T)*(c), (align))
