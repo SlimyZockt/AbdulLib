@@ -6,14 +6,11 @@
 
 #if ALib_BASE_CORE_STRIP_PREFIX 
 //NOTE: Codebase Keywords
-# define internal ALib_internal
-# define global ALib_global
-# define local_persist ALib_local_persist
-# define rodata ALib_rodata
+# define internal alib_internal
+# define global alib_global
+# define local_persist alib_local_persist
+# define rodata alib_rodata
 //NOTE: Utility Marcos
-# define ALib(name)
-# define ALibProc(name)
-# define ALibConst(name)
 # define Statement ALib_Statement
 # define Stringify ALib_Stringify
 # define Glue ALib_Glue
@@ -90,7 +87,6 @@
 # define MemoryRead ALib_MemoryRead
 # define MemoryConsume ALib_MemoryConsume
 
-
 // Linked List Building Macros
 
 //NOTE: linked list macro helpers
@@ -142,20 +138,25 @@
 
 #endif
 
+#ifndef ALIB_DEF
+# define ALIB_DEF 
+#endif
+
+//NOTE: Codebase Keywords
+#define alib_internal static
+#define alib_global static
+#define alib_local_persist static
+
+#define alib_rodata static const
+
+//NOTE: Utility Marcos
 #define ALibTypedef(type, name) typedef type name
 #define ALibStructForward(name) ALibTypedef(struct ALib(name), ALib(name))
 #define ALibStruct(name) ALibStructForward(name); struct ALib(name)
 #define ALibUnionForward(name) ALibTypedef(union ALib(name), ALib(name))
-#define ALibUnion(name) ALibUnionForward(name); union 
+#define ALibUnion(name) ALibUnionForward(name); union ALib(name)
+#define ALibEnum(name, size) ALibTypedef(type, ALib(name)); enum ALib(name)
 
-//NOTE: Codebase Keywords
-#define ALib_internal static
-#define ALib_global static
-#define ALib_local_persist static
-
-#define ALib_rodata static const
-
-//NOTE: Utility Marcos
 #define ALib_Statement(S) do {S} while(0)
 
 #define ALib_Stringify_(S) #S
@@ -253,7 +254,7 @@ ALibStruct(SourceLocation) {
 #define ALib_InvalidPath        ALib_Assert(!"Invalid Path!")
 #define ALib_NotImplemented     ALib_Assert(!"Not Implemented!")
 #define ALib_NoOp               ((void)0)
-#define ALib_StaticAssert(C, ID) ALib_global ALib(u8) ALib_Glue(ID, __LINE__)[(C)?1:-1]
+#define ALib_StaticAssert(C, ID) alib_global ALib(u8) ALib_Glue(ID, __LINE__)[(C)?1:-1]
 
 //NOTE: Member Offsets
 #define ALib_Member(T,m)                 (((T*)0)->m)
