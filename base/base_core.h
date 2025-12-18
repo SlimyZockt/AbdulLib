@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#if ALib_BASE_CORE_STRIP_PREFIX 
+#if ALIB_BASE_CORE_STRIP_PREFIX 
 //NOTE: Codebase Keywords
 # define internal alib_internal
 # define global alib_global
@@ -130,6 +130,10 @@
 # define SLLStackPush ALib_SLLStackPush
 # define SLLStackPop  ALib_SLLStackPop
 
+# define ALib(name) name
+# define ALibProc(name) name
+# define ALibConst(name) name
+
 #else
 
 # define ALib(name) ALib##name
@@ -139,7 +143,7 @@
 #endif
 
 #ifndef ALIB_DEF
-# define ALIB_DEF 
+# define ALIB_DEF
 #endif
 
 //NOTE: Codebase Keywords
@@ -155,7 +159,7 @@
 #define ALibStruct(name) ALibStructForward(name); struct ALib(name)
 #define ALibUnionForward(name) ALibTypedef(union ALib(name), ALib(name))
 #define ALibUnion(name) ALibUnionForward(name); union ALib(name)
-#define ALibEnum(name, size) ALibTypedef(type, ALib(name)); enum ALib(name)
+#define ALibEnum(name, size) ALibTypedef(size, ALib(name)); enum ALib(name)
 
 #define ALib_Statement(S) do {S} while(0)
 
@@ -176,8 +180,8 @@
 
 #define ALib_PtrFromInt(i) (void*)(i)
 
-#define ALib_Compose64Bit(a,b)  ((((ALib_u64)a) << 32) | ((ALib_u64)b))
-#define ALib_Compose32Bit(a,b)  ((((ALib_u32)a) << 16) | ((ALib_u32)b))
+#define ALib_Compose64Bit(a,b)  ((((ALib(u64))a) << 32) | ((ALib(u64))b))
+#define ALib_Compose32Bit(a,b)  ((((ALib(u32))a) << 16) | ((ALib(u32))b))
 #define ALib_AlignPow2(x,b)     (((x) + (b) - 1)&(~((b) - 1)))
 #define ALib_AlignDownPow2(x,b) ((x)&(~((b) - 1)))
 #define ALib_AlignPadPow2(x,b)  ((0-(x)) & ((b) - 1))
@@ -202,10 +206,10 @@
 #endif
 
 //NOTE: Units
-#define ALib_KB(n)  (((ALib_u64)(n)) << 10)
-#define ALib_MB(n)  (((ALib_u64)(n)) << 20)
-#define ALib_GB(n)  (((ALib_u64)(n)) << 30)
-#define ALib_TB(n)  (((ALib_u64)(n)) << 40)
+#define ALib_KB(n)  (((ALib(u64))(n)) << 10)
+#define ALib_MB(n)  (((ALib(u64))(n)) << 20)
+#define ALib_GB(n)  (((ALib(u64))(n)) << 30)
+#define ALib_TB(n)  (((ALib(u64))(n)) << 40)
 #define ALib_Thousand(n)   ((n)*1000)
 #define ALib_Million(n)    ((n)*1000000)
 #define ALib_Billion(n)    ((n)*1000000000)
@@ -265,6 +269,8 @@ ALibStruct(SourceLocation) {
 #define ALib_Min(a,b) (((a)<(b)) ? (a):(b))
 #define ALib_Max(a,b) (((a)>(b)) ? (a):(b))
 #define ALib_Clamp(a,x,b) (((x)<(a)) ? (a):((b)<(x)) ? (b):(x))
+#define ALib_ClampTop(a,b) ALib_Min(a, b)
+#define ALib_ClampBot(a,b) ALib_Max(a,b)
 
 //NOTE: For-Loop Construct Macros
 #define ALib_DeferLoop(begin, end)        for(int _i_ = ((begin), 0); !_i_; _i_ += 1, (end))

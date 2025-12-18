@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     if (!nob_mkdir_if_not_exists(BUILD_FOLDER)) return 1;
 
     nob_cc(&cmd);
-    nob_cmd_append(&cmd, "-std=c11", "-g");
+    nob_cmd_append(&cmd, "-std=c11", "-g", "-Wno-initializer-overrides");
     // nob_cc_flags(&cmd);
     nob_cc_inputs(&cmd, SRC_FOLDER "example_1.c");
     nob_cc_output(&cmd, BUILD_FOLDER OUT_FILE);
