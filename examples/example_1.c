@@ -11,14 +11,14 @@
 #include "../base/base_inc.h"
 #include "../base/base_inc.c"
 
-#define printfln_array(fstr, arr, count)   \
+#define printfln_array(fstr, arr, count)       \
     Statement(                                 \
-            printf("[");                           \
-            for EachIndex(it, count) {             \
+            printf("[");                       \
+            for EachIndex(it, count) {         \
             printf(fstr, arr[it]);             \
             printf(", ");                      \
-            }                                      \
-            printf("]\n");                         \
+            }                                  \
+            printf("]\n");                     \
             )
 
 #define printfln(str, ...) printf(str "\n", ##__VA_ARGS__)
