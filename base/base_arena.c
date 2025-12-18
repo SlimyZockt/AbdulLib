@@ -183,7 +183,7 @@ ALIB_DEF void ALibProc(arena_pop_to)(ALib(Arena) *arena, ALib(u64) pos) {
 }
 
 //Note: arena push/pop helpers
-ALIB_DEF void ALibProc(alib_arena_clear)(ALib(Arena) *arena) {
+ALIB_DEF void ALibProc(arena_clear)(ALib(Arena) *arena) {
     arena_pop_to(arena, 0);
 }
 

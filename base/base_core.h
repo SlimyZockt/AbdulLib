@@ -155,11 +155,11 @@
 
 //NOTE: Utility Marcos
 #define ALibTypedef(type, name) typedef type name
-#define ALibStructForward(name) ALibTypedef(struct ALib(name), ALib(name))
-#define ALibStruct(name) ALibStructForward(name); struct ALib(name)
-#define ALibUnionForward(name) ALibTypedef(union ALib(name), ALib(name))
-#define ALibUnion(name) ALibUnionForward(name); union ALib(name)
-#define ALibEnum(name, size) ALibTypedef(size, ALib(name)); enum ALib(name)
+#define ALibStructForward(name) ALibTypedef(struct name,name)
+#define ALibStruct(name) ALibStructForward(name); struct name
+#define ALibUnionForward(name) ALibTypedef(union name, name)
+#define ALibUnion(name) ALibUnionForward(name); union name
+#define ALibEnum(name, size) ALibTypedef(size, name); enum name
 
 #define ALib_Statement(S) do {S} while(0)
 
@@ -240,7 +240,7 @@ ALibTypedef(void, ALib(VoidProc(void)));
 # error Unknown trap intrinsic for this compiler.
 #endif
 
-ALibStruct(SourceLocation) {
+ALibStruct(ALib(SourceLocation)) {
     char* file;
     int line;
 };

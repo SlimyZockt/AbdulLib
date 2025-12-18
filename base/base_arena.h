@@ -11,14 +11,14 @@
 
 #endif
 
-ALibEnum(ArenaFlags, ALib(u64)) {
+ALibEnum(ALib(ArenaFlags), ALib(u64)) {
     ALib(ArenaFlag_NoChain)    = (1<<0),
     // ALib(ArenaFlag_LargePages)    = (2<<0),
 };
 
 #define ALIB_ARENA_HEADER_SIZE 128
 
-ALibStruct(ArenaParams){
+ALibStruct(ALib(ArenaParams)){
     ALib(ArenaFlags) flags;
     ALib(u64) reserve_size;
     ALib(u64) commit_size;
@@ -26,7 +26,7 @@ ALibStruct(ArenaParams){
     ALib(SourceLocation) loc;
 };
 
-ALibStruct(Arena){
+ALibStruct(ALib(Arena)){
     ALib(Arena) *prev;    // previous arena in chain
     ALib(Arena) *current; // current arena in chain
     ALib(Arena) *free_last;
@@ -43,7 +43,7 @@ ALibStruct(Arena){
 
 ALib_StaticAssert(sizeof(ALib(Arena)) <= ALIB_ARENA_HEADER_SIZE, arena_header_size_check);
 
-ALibStruct(Temp){
+ALibStruct(ALib(Temp)){
     ALib(Arena) *arena;
     ALib(u64) pos;
 };

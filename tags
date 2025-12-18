@@ -450,7 +450,7 @@ delete_file	vendored/nob.h	/^#define delete_file nob_delete_file$/;"	d
 dirent	vendored/nob.h	/^    struct dirent *dirent;$/;"	m	struct:DIR	typeref:struct:dirent *
 dirent	vendored/nob.h	/^struct dirent {$/;"	s
 disable_raw_mode	examples/example_1.c	/^void disable_raw_mode() {$/;"	f	typeref:typename:void
-enable_raw_mode	examples/example_1.c	/^void enable_raw_mode(struct termios og_termios) {$/;"	f	typeref:typename:void
+enable_raw_mode	examples/example_1.c	/^void enable_raw_mode() {$/;"	f	typeref:typename:void
 fd_close	vendored/nob.h	/^#define fd_close nob_fd_close$/;"	d
 fd_open_for_read	vendored/nob.h	/^#define fd_open_for_read nob_fd_open_for_read$/;"	d
 fd_open_for_write	vendored/nob.h	/^#define fd_open_for_write nob_fd_open_for_write$/;"	d
@@ -459,6 +459,7 @@ fdin	vendored/nob.h	/^    Nob_Fd *fdin;$/;"	m	struct:__anon2aa7b1200808	typeref:
 fdout	vendored/nob.h	/^    Nob_Fd *fdout;$/;"	m	struct:__anon2aa7b1200808	typeref:typename:Nob_Fd *
 file_exists	vendored/nob.h	/^#define file_exists nob_file_exists$/;"	d
 g_arena	examples/example_1.c	/^Arena *g_arena = NULL;$/;"	v	typeref:typename:Arena *
+g_og_termios	examples/example_1.c	/^struct termios g_og_termios = {0};$/;"	v	typeref:struct:termios
 get_current_dir_temp	vendored/nob.h	/^#define get_current_dir_temp nob_get_current_dir_temp$/;"	d
 get_file_type	vendored/nob.h	/^#define get_file_type nob_get_file_type$/;"	d
 global	base/base_core.h	/^# define global alib_global$/;"	d
