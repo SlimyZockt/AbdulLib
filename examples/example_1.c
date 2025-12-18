@@ -31,7 +31,7 @@
 #define CURSOR_HOME "\033[H"
 #define CLEAR_SCREEN "\033[2J"
 
-#define FrameBufferPos(x, y, width) ((3+x) + (y*width))
+#define FrameBufferPos(x, y) ((3+x) + (y*screen_width))
 
 ALibEnum(Key,u8) {
     KEY_NONE  = 0,
@@ -102,28 +102,28 @@ Key read_key() {
 
 int main(int argc, char **argv) {
     g_arena = arena_alloc();
-    u64 board_width = 0;
-    u64 board_hight = 0;
+    u64 screen_width = 0;
+    u64 screen_hight = 0;
 
     {// Setup Term
         struct winsize ws = {0};
         ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws);
-        board_width = ws.ws_col;
-        board_hight = ws.ws_row;
+        screen_width = ws.ws_col;
+        screen_hight = ws.ws_row;
 
-        printfln("W: %lu", board_width);
-        printfln("H: %lu", board_hight);
+        printfln("W: %lu", screen_width);
+        printfln("H: %lu", screen_hight);
     }
 
-    u64 front_buffer_size = 3 + (board_hight * board_width);
-    char *front_buffer = push_array(g_arena, char, front_buffer_size);
+    u64 frame_buffer_size = 3 + (screen_hight * screen_width);
+    char *frame_buffer = push_array(g_arena, char, frame_buffer_size);
 
-    front_buffer[0] = '\033';
-    front_buffer[1] = '[';
-    front_buffer[2] = 'H';
+    frame_buffer[0] = '\033';
+    frame_buffer[1] = '[';
+    frame_buffer[2] = 'H';
 
-    u64 cx = board_width / 2.0f;
-    u64 cy = board_hight / 2.0f;
+    u64 cx = screen_width / 2.0f;
+    u64 cy = screen_hight / 2.0f;
 
     printfln("=== Game Of Life ===");
 
@@ -146,17 +146,18 @@ int main(int argc, char **argv) {
 
         {// draw cursor
 
-            for EachIndex(y, board_hight) {
-                for EachIndex(x, board_width) {
+            for EachIndex(y, screen_hight) {
+                for EachIndex(x, screen_width) {
+                    frame_buffer[FrameBufferPos(x,y)] = ' ';
                     if (y == cy && x == cx) {
-                        front_buffer[FrameBufferPos(x,y,board_width)] = '@';
-                    } else {
-                        front_buffer[FrameBufferPos(x,y,board_width)] = ' ';
+                        frame_buffer[FrameBufferPos(x,y)] = '@';
                     }
                 }
             }
 
-            write(STDOUT_FILENO, front_buffer, front_buffer_size);
+            memcpy(frame_buffer + FrameBufferPos(0,(screen_hight-1)), "WASD/HJKL: move | Q: exit", 25);
+
+            write(STDOUT_FILENO, frame_buffer, frame_buffer_size);
         }
 
 
