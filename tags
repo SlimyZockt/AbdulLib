@@ -92,26 +92,28 @@ ALIB_OS_MAC	base/base_context.h	/^# define ALIB_OS_MAC /;"	d
 ALIB_OS_MAC	base/base_context.h	/^#define ALIB_OS_MAC /;"	d
 ALIB_OS_WINDOWS	base/base_context.h	/^# define ALIB_OS_WINDOWS /;"	d
 ALIB_OS_WINDOWS	base/base_context.h	/^#define ALIB_OS_WINDOWS /;"	d
+ALTERNATE_SCREEN_BUFFER	examples/example_1.c	/^#define ALTERNATE_SCREEN_BUFFER /;"	d	file:
 ALib	base/base_arena.c	/^ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params) {$/;"	f	typeref:typename:ALIB_DEF
 ALib	base/base_arena.c	/^ALIB_DEF ALib(Temp) ALibProc(temp_begin)(ALib(Arena) *arena) {$/;"	f	typeref:typename:ALIB_DEF
 ALib	base/base_arena.c	/^ALIB_DEF ALib(u64) ALibProc(arena_pos)(ALib(Arena) *arena) {$/;"	f	typeref:typename:ALIB_DEF
 ALib	base/base_core.h	/^# define ALib(/;"	d
 ALib	base/base_core.h	/^# define ALib(name) ALib#/;"	d
 ALibConst	base/base_core.h	/^# define ALibConst(/;"	d
-ALibEnum	base/base_arena.h	/^ALibEnum(ArenaFlags, ALib(u64)) {$/;"	f
+ALibEnum	base/base_arena.h	/^ALibEnum(ALib(ArenaFlags), ALib(u64)) {$/;"	f
 ALibEnum	base/base_core.h	/^#define ALibEnum(/;"	d
+ALibEnum	examples/example_1.c	/^ALibEnum(Key,u8) {$/;"	f
 ALibProc	base/base_arena.c	/^ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align) {$/;"	f	typeref:typename:ALIB_DEF void *
-ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(alib_arena_clear)(ALib(Arena) *arena) {$/;"	f	typeref:typename:ALIB_DEF void
+ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(arena_clear)(ALib(Arena) *arena) {$/;"	f	typeref:typename:ALIB_DEF void
 ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(arena_pop)(ALib(Arena) *arena, ALib(u64) amt) {$/;"	f	typeref:typename:ALIB_DEF void
 ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(arena_pop_to)(ALib(Arena) *arena, ALib(u64) pos) {$/;"	f	typeref:typename:ALIB_DEF void
 ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(arena_release)(ALib(Arena) *arena) {$/;"	f	typeref:typename:ALIB_DEF void
 ALibProc	base/base_arena.c	/^ALIB_DEF void ALibProc(temp_end)(ALib(Temp) temp) {$/;"	f	typeref:typename:ALIB_DEF void
 ALibProc	base/base_core.h	/^# define ALibProc(/;"	d
-ALibStruct	base/base_arena.h	/^ALibStruct(Arena){$/;"	f
-ALibStruct	base/base_arena.h	/^ALibStruct(ArenaParams){$/;"	f
-ALibStruct	base/base_arena.h	/^ALibStruct(Temp){$/;"	f
+ALibStruct	base/base_arena.h	/^ALibStruct(ALib(Arena)){$/;"	f
+ALibStruct	base/base_arena.h	/^ALibStruct(ALib(ArenaParams)){$/;"	f
+ALibStruct	base/base_arena.h	/^ALibStruct(ALib(Temp)){$/;"	f
 ALibStruct	base/base_core.h	/^#define ALibStruct(name) ALibStructF/;"	d
-ALibStruct	base/base_core.h	/^ALibStruct(SourceLocation) {$/;"	f
+ALibStruct	base/base_core.h	/^ALibStruct(ALib(SourceLocation)) {$/;"	f
 ALibStructForward	base/base_core.h	/^#define ALibStructForward(/;"	d
 ALibTypedef	base/base_core.h	/^#define ALibTypedef(/;"	d
 ALibUnion	base/base_core.h	/^#define ALibUnion(name) ALibUnionF/;"	d
@@ -219,6 +221,8 @@ Assert	base/base_core.h	/^# define Assert ALib_Assert$/;"	d
 AssertAlways	base/base_core.h	/^# define AssertAlways /;"	d
 BUILD_FOLDER	examples/nob.c	/^#define BUILD_FOLDER /;"	d	file:
 Billion	base/base_core.h	/^# define Billion ALib_Billion$/;"	d
+CLEAR_SCREEN	examples/example_1.c	/^#define CLEAR_SCREEN /;"	d	file:
+CURSOR_HOME	examples/example_1.c	/^#define CURSOR_HOME /;"	d	file:
 CallerLocation	base/base_core.h	/^# define CallerLocation ALib_CallerLocation /;"	d
 CastFromMember	base/base_core.h	/^# define CastFromMember ALib_CastFromMember$/;"	d
 CheckNil	base/base_core.h	/^# define CheckNil ALib_CheckNil$/;"	d
@@ -257,8 +261,10 @@ FILE_SYMLINK	vendored/nob.h	/^#define FILE_SYMLINK NOB_FILE_SYMLINK$/;"	d
 Fd	vendored/nob.h	/^#define Fd Nob_Fd$/;"	d
 File_Paths	vendored/nob.h	/^#define File_Paths Nob_File_Paths$/;"	d
 File_Type	vendored/nob.h	/^#define File_Type Nob_File_Type$/;"	d
+FrameBufferPos	examples/example_1.c	/^#define FrameBufferPos(/;"	d	file:
 GB	base/base_core.h	/^# define GB ALib_GB$/;"	d
 Glue	base/base_core.h	/^# define Glue ALib_Glue$/;"	d
+HIDE_CURSOR	examples/example_1.c	/^#define HIDE_CURSOR /;"	d	file:
 INFO	vendored/nob.h	/^#define INFO NOB_INFO$/;"	d
 INVALID_FD	vendored/nob.h	/^#define INVALID_FD NOB_INVALID_FD$/;"	d
 INVALID_PROC	vendored/nob.h	/^#define INVALID_PROC NOB_INVALID_PROC$/;"	d
@@ -268,6 +274,7 @@ IsPow2	base/base_core.h	/^# define IsPow2 ALib_IsPow2$/;"	d
 IsPow2OrZero	base/base_core.h	/^# define IsPow2OrZero ALib_IsPow2OrZero$/;"	d
 KB	base/base_core.h	/^# define KB ALib_KB$/;"	d
 Log_Level	vendored/nob.h	/^#define Log_Level Nob_Log_Level$/;"	d
+MAIN_SCREEN_BUFFER	examples/example_1.c	/^#define MAIN_SCREEN_BUFFER /;"	d	file:
 MB	base/base_core.h	/^# define MB ALib_MB$/;"	d
 Max	base/base_core.h	/^# define Max ALib_Max$/;"	d
 Member	base/base_core.h	/^# define Member ALib_Member$/;"	d
@@ -347,6 +354,7 @@ OffsetOf	base/base_core.h	/^# define OffsetOf ALib_OffsetOf$/;"	d
 Proc	vendored/nob.h	/^#define Proc Nob_Proc$/;"	d
 Procs	vendored/nob.h	/^#define Procs Nob_Procs$/;"	d
 PtrFromInt	base/base_core.h	/^# define PtrFromInt ALib_PtrFromInt$/;"	d
+SHOW_CURSOR	examples/example_1.c	/^#define SHOW_CURSOR /;"	d	file:
 SLLQueuePop	base/base_core.h	/^# define SLLQueuePop         ALib_SLLQueuePop$/;"	d
 SLLQueuePop_N	base/base_core.h	/^# define SLLQueuePop_N       ALib_SLLQueuePop_N$/;"	d
 SLLQueuePop_NZ	base/base_core.h	/^# define SLLQueuePop_NZ ALib_SLLQueuePop_NZ$/;"	d
@@ -580,6 +588,7 @@ push_array_no_zero	base/base_arena.h	/^#define push_array_no_zero alib_push_arra
 push_array_no_zero_aligned	base/base_arena.h	/^#define push_array_no_zero_aligned alib_push_array_no_zero_aligned$/;"	d
 read_entire_dir	vendored/nob.h	/^#define read_entire_dir nob_read_entire_dir$/;"	d
 read_entire_file	vendored/nob.h	/^#define read_entire_file nob_read_entire_file$/;"	d
+read_key	examples/example_1.c	/^Key read_key() {$/;"	f	typeref:typename:Key
 readdir	vendored/nob.h	/^NOBDEF struct dirent *readdir(DIR *dirp) {$/;"	f	typeref:typename:NOBDEF struct dirent *
 return_defer	vendored/nob.h	/^#define return_defer nob_return_defer$/;"	d
 rodata	base/base_core.h	/^# define rodata alib_rodata$/;"	d
