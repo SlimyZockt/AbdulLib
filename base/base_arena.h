@@ -65,7 +65,7 @@ ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params);
 ALIB_DEF void ALibProc(arena_release)(ALib(Arena) *arena);
 
 // arena push/pop/pos core functions
-ALIB_DEF void      *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align);
+ALIB_DEF void      *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align, ALib(b32) zero);
 ALIB_DEF ALib(u64)  ALibProc(arena_pos)(ALib(Arena) *arena);
 ALIB_DEF void       ALibProc(arena_pop_to)(ALib(Arena) *arena, ALib(u64) pos);
 
@@ -78,9 +78,8 @@ ALIB_DEF ALib(Temp) ALibProc(temp_begin)(ALib(Arena) *arena);
 ALIB_DEF void       ALibProc(alib_temp_end)(ALib(Temp) temp);
 
 // push helper macros
-#define alib_push_array_no_zero_aligned(a, T, c, align) (T *)ALibProc(arena_push)((a), sizeof(T)*(c), (align))
-#define alib_push_array_aligned(a, T, c, align) (T *)ALib_MemoryZero(push_array_no_zero_aligned(a, T, c, align), sizeof(T)*(c))
-#define alib_push_array_no_zero(a, T, c) alib_push_array_no_zero_aligned(a, T, c, alib_Max(8, ALib_AlignOf(T)))
-#define alib_push_array(a, T, c) alib_push_array_aligned(a, T, c, ALib_Max(8, ALib_AlignOf(T)))
-
+#define push_array_no_zero_aligned(a, T, c, align) (T *)ALibProc(arena_push)((a), sizeof(T)*(c), (align), (0))
+#define push_array_aligned(a, T, c, align) (T *)ALibProc(arena_push)((a), sizeof(T)*(c), (align), (1))
+#define push_array_no_zero(a, T, c) push_array_no_zero_aligned(a, T, c, ALib_Max(8, ALib_AlignOf(T)))
+#define push_array(a, T, c) push_array_aligned(a, T, c, ALib_Max(8, ALib_AlignOf(T)))
 #endif

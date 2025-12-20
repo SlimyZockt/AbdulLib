@@ -90,22 +90,14 @@ Key read_key() {
 u8 get_alive_neighbors(char *cell, u64 x, u64 y, u64 width, u64 height){
     u8 count = 0;
 
-    // left
-    if (x > 0 && cell[-1] == '#')                                  count += 1;
-    // right
-    if (x + 1 < width && cell[1] == '#')                           count += 1;
-    //  up
-    if (y > 0 && cell[-width] == '#')                              count += 1;
-    // down
-    if (y + 1 < height && cell[width] == '#')                      count += 1;
-    // left+up
-    if (x > 0 && y > 0 && cell[-1 - width] == '#')                 count += 1;
-    // right+up
-    if (x + 1 < width && y > 0 && cell[1 - width] == '#')          count += 1;
-    // left+down
-    if (x > 0 && y + 1 < height && cell[-1 + width] == '#')        count += 1;
-    // right+down
-    if (x + 1 < width && y + 1 < height && cell[1 + width] == '#') count += 1;
+    if (x > 0 && cell[-1] == '#')                                  count += 1; // left
+    if (x + 1 < width && cell[1] == '#')                           count += 1; // right
+    if (y > 0 && cell[-width] == '#')                              count += 1; // up
+    if (y + 1 < height && cell[width] == '#')                      count += 1; // down
+    if (x > 0 && y > 0 && cell[-1 - width] == '#')                 count += 1; // left+up
+    if (x + 1 < width && y > 0 && cell[1 - width] == '#')          count += 1; // right+up
+    if (x > 0 && y + 1 < height && cell[-1 + width] == '#')        count += 1; // left+down
+    if (x + 1 < width && y + 1 < height && cell[1 + width] == '#') count += 1; // right+down
 
     return count;
 }
@@ -120,9 +112,6 @@ int main(int argc, char **argv) {
         ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws);
         screen_width = ws.ws_col;
         screen_height = ws.ws_row;
-
-        printfln("W: %lu", screen_width);
-        printfln("H: %lu", screen_height);
     }
 
     u64 board_size = (screen_height * screen_width);
@@ -150,27 +139,34 @@ int main(int argc, char **argv) {
     enable_raw_mode();
 
     b8 is_simulating = 0;
+    b8 animate_toggle = 0;
     u64 frame_count = 0;
     const u64 sim_interval = 6;
-
+    const u64 animaion_dur = 15;
     for (;;) {
-        b8 should_set_tile = 0;
+        if( ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1){ // Setup Term
+             
+        }
+
+        b8 should_toggle_tile = 0;
 
         switch (read_key()) {
             case KEY_QUIT:  goto exit;
-            case KEY_UP:    if(cy > 0) cy -= 1;               break;    
-            case KEY_DOWN:  if(cy < screen_height-2) cy += 1; break;  
-            case KEY_LEFT:  if(cx > 0) cx-= 1;                break;  
-            case KEY_RIGHT: if(cx < screen_width-1) cx+= 1;   break; 
-            case KEY_PLACE: should_set_tile = 1;              break; 
-            case KEY_PLAY:  is_simulating = !is_simulating;   break; 
-            default:                                          break;
+            case KEY_UP:    if(cy > 0) cy -= 1;                        break;    
+            case KEY_DOWN:  if(cy < screen_height-2) cy += 1;          break;  
+            case KEY_LEFT:  if(cx > 0) cx-= 1;                         break;  
+            case KEY_RIGHT: if(cx < screen_width-1) cx+= 1;            break; 
+            // case KEY_PLACE: if(!is_simulating) should_toggle_tile = 1; break; 
+            case KEY_PLACE: should_toggle_tile = 1; break; 
+            case KEY_PLAY:  is_simulating = !is_simulating;            break; 
+            default:                                                   break;
         }
 
         {// draw cursor
-            if (should_set_tile) {
+            if (should_toggle_tile) {
+                should_toggle_tile = 0;
                 board[BoardPos(cx,cy)] = board[BoardPos(cx,cy)] == '#' ? ' ' : '#';
-                should_set_tile = 0;
+                animate_toggle = 1;
             }
 
             if (is_simulating && frame_count % sim_interval == 0){ // game of life
@@ -200,7 +196,12 @@ int main(int argc, char **argv) {
             }
             
             frame_buffer[FrameBufferPos(cx,cy)] = '@';
-
+            if (animate_toggle) {
+                frame_buffer[FrameBufferPos(cx,cy)] = '$';
+            }
+            if (animate_toggle && frame_count % animaion_dur == 0) {
+                animate_toggle = 0;
+            }
 
             char *pause_state = is_simulating ? "Play " : "Pause";
             memcpy(frame_buffer + FrameBufferPos(0,screen_height-1), "WASD/HJKL: Move | Q: Exit | E: Place | P: ", 42);

@@ -92,8 +92,8 @@ ALIB_DEF void ALibProc(arena_release)(ALib(Arena) *arena) {
     }
 }
 
-//Note: arena push/pop core functions
-ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align) {
+//NOTE: arena push/pop core functions
+ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align, ALib(b32) zero) {
     ALib(Arena) *current = arena->current;
     ALib(u64) pos_pre = ALib_AlignPow2(current->pos, align);
     ALib(u64) pos_pst = pos_pre + size;
@@ -102,17 +102,19 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
     if(current->res < pos_pst && !(arena->flags & ALib(ArenaFlag_NoChain))) {
         ALib(Arena) *new_block = 0;
 
-        ALib(Arena) *prev_block;
-        for(new_block = arena->free_last, prev_block = 0; new_block != 0; prev_block = new_block, new_block = new_block->prev) {
-            if(new_block->res >= ALib_AlignPow2(size, align)) {
-                if(prev_block) {
-                    prev_block->prev = new_block->prev;
+        {// use free list
+            ALib(Arena) *prev_block;
+            for(new_block = arena->free_last, prev_block = 0; new_block != 0; prev_block = new_block, new_block = new_block->prev) {
+                if(new_block->res >= ALib_AlignPow2(size, align)) {
+                    if(prev_block) {
+                        prev_block->prev = new_block->prev;
+                    }
+                    else {
+                        arena->free_last = new_block->prev;
+                    }
+                    arena->free_size -= new_block->res_size;
+                    break;
                 }
-                else {
-                    arena->free_last = new_block->prev;
-                }
-                arena->free_size -= new_block->res_size;
-                break;
             }
         }
 
@@ -124,9 +126,9 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
                 cmt_size = ALib_AlignPow2(size + ALIB_ARENA_HEADER_SIZE, align);
             }
             new_block = alib_arena_alloc(.reserve_size = res_size,
-                    .commit_size  = cmt_size,
-                    .flags        = current->flags,
-                    .loc = current->loc);
+                                         .commit_size  = cmt_size,
+                                         .flags        = current->flags,
+                                         .loc = current->loc);
         }
 
         new_block->base_pos = current->base_pos + current->res;
@@ -135,6 +137,11 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
         current = new_block;
         pos_pre = ALib_AlignPow2(current->pos, align);
         pos_pst = pos_pre + size;
+    }
+
+    ALib(u64) size_to_zero = 0;
+    if(zero) {
+        size_to_zero = Min(current->cmt, pos_pst) - pos_pre;
     }
 
     //NOTE: commit new pages, if needed
@@ -153,6 +160,9 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
     if(current->cmt >= pos_pst) {
         result = (ALib(u8)*)current+pos_pre;
         current->pos = pos_pst;
+        if (size_to_zero != 0) {
+            ALib_MemoryZero(result, size_to_zero);
+        }
     }
 
     ALib_Ensure(result != 0 );
