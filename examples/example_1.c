@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
     char *board = push_array(g_arena, char, board_size);
     memset(board, ' ', board_size);
     char *next_board = push_array(g_arena, char, board_size);
-    memset(next_board, ' ', board_size);
+    memset(next_board, 0, board_size);
 
     frame_buffer[0] = '\033';
     frame_buffer[1] = '[';
