@@ -159,7 +159,7 @@ int main(int argc, char **argv) {
     const u64 sim_interval = 6;
     const u64 animaion_dur = 15;
     for (;;) {
-        if(ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1){ // Setup Term
+        if(ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1){ // Resize Term
             if (ws.ws_col != td.screen_width || ws.ws_row != td.screen_height) {
                 Temp temp={0};
                 DeferLoop(temp = temp_begin(g_arena), temp_end(temp)){
