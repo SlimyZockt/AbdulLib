@@ -1,7 +1,6 @@
 #define _POSIX_C_SOURCE 199309L
 #define ALIB_BASE_INC_STRIP_PREFIX 1
 #include <stdio.h>
-#include <stdio.h>
 #include <time.h>
 #include <termios.h>
 #include <sys/ioctl.h>
@@ -10,19 +9,6 @@
 
 #include "../base/base_inc.h"
 #include "../base/base_inc.c"
-
-
-#define printfln_array(fstr, arr, count)       \
-    Statement(                                 \
-            printf("[");                       \
-            for EachIndex(it, (count)) {       \
-            printf((fstr), (arr)[it]);         \
-            printf(", ");                      \
-            }                                  \
-            printf("]\n");                     \
-            )
-
-#define printfln(str, ...) printf(str "\n", ##__VA_ARGS__)
 
 #define MAIN_SCREEN_BUFFER "\033[?1049l"
 #define ALTERNATE_SCREEN_BUFFER "\033[?1049h"

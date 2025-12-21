@@ -56,8 +56,8 @@ ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params) {
     ALib(u64) reserve_size = params->reserve_size;
     ALib(u64) commit_size = params->commit_size;
 
-    reserve_size = ALib_AlignPow2(reserve_size, _alib_get_pagesize());
-    commit_size  = ALib_AlignPow2(commit_size,  _alib_get_pagesize());
+    reserve_size = ALibAlignPow2(reserve_size, _alib_get_pagesize());
+    commit_size  = ALibAlignPow2(commit_size,  _alib_get_pagesize());
 
     //NOTE: reserve/commit initial block
     void *base = params->optional_backing_buffer;
@@ -67,7 +67,7 @@ ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params) {
     }
 
     //NOTE: panic on arena creation failure
-    ALib_Ensure(base != 0);
+    ALibEnsure(base != 0);
 
     //NOTE: extract arena header & fill
     ALib(Arena) *arena = (ALib(Arena)*)base;
@@ -95,7 +95,7 @@ ALIB_DEF void ALibProc(arena_release)(ALib(Arena) *arena) {
 //NOTE: arena push/pop core functions
 ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64) align, ALib(b32) zero) {
     ALib(Arena) *current = arena->current;
-    ALib(u64) pos_pre = ALib_AlignPow2(current->pos, align);
+    ALib(u64) pos_pre = ALibAlignPow2(current->pos, align);
     ALib(u64) pos_pst = pos_pre + size;
 
     //NOTE: chain, if needed
@@ -105,7 +105,7 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
         {// use free list
             ALib(Arena) *prev_block;
             for(new_block = arena->free_last, prev_block = 0; new_block != 0; prev_block = new_block, new_block = new_block->prev) {
-                if(new_block->res >= ALib_AlignPow2(size, align)) {
+                if(new_block->res >= ALibAlignPow2(size, align)) {
                     if(prev_block) {
                         prev_block->prev = new_block->prev;
                     }
@@ -122,8 +122,8 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
             ALib(u64) res_size = current->res_size;
             ALib(u64) cmt_size = current->cmt_size;
             if(size + ALIB_ARENA_HEADER_SIZE > res_size) {
-                res_size = ALib_AlignPow2(size + ALIB_ARENA_HEADER_SIZE, align);
-                cmt_size = ALib_AlignPow2(size + ALIB_ARENA_HEADER_SIZE, align);
+                res_size = ALibAlignPow2(size + ALIB_ARENA_HEADER_SIZE, align);
+                cmt_size = ALibAlignPow2(size + ALIB_ARENA_HEADER_SIZE, align);
             }
             new_block = alib_arena_alloc(.reserve_size = res_size,
                                          .commit_size  = cmt_size,
@@ -132,10 +132,10 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
         }
 
         new_block->base_pos = current->base_pos + current->res;
-        ALib_SLLStackPush_N(arena->current, new_block, prev);
+        ALibSLLStackPush_N(arena->current, new_block, prev);
 
         current = new_block;
-        pos_pre = ALib_AlignPow2(current->pos, align);
+        pos_pre = ALibAlignPow2(current->pos, align);
         pos_pst = pos_pre + size;
     }
 
@@ -148,7 +148,7 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
     if(current->cmt < pos_pst) {
         ALib(u64) cmt_pst_aligned = pos_pst + current->cmt_size-1;
         cmt_pst_aligned -= cmt_pst_aligned%current->cmt_size;
-        ALib(u64) cmt_pst_clamped = ALib_ClampTop(cmt_pst_aligned, current->res);
+        ALib(u64) cmt_pst_clamped = ALibClampTop(cmt_pst_aligned, current->res);
         ALib(u64) cmt_size = cmt_pst_clamped - current->cmt;
         ALib(u8) *cmt_ptr = (ALib(u8) *)current + current->cmt;
         _alib_os_commit(cmt_ptr, cmt_size);
@@ -161,11 +161,11 @@ ALIB_DEF void *ALibProc(arena_push)(ALib(Arena) *arena, ALib(u64) size, ALib(u64
         result = (ALib(u8)*)current+pos_pre;
         current->pos = pos_pst;
         if (size_to_zero != 0) {
-            ALib_MemoryZero(result, size_to_zero);
+            ALibMemoryZero(result, size_to_zero);
         }
     }
 
-    ALib_Ensure(result != 0 );
+    ALibEnsure(result != 0 );
 
     return result;
 }
@@ -177,18 +177,18 @@ ALIB_DEF ALib(u64) ALibProc(arena_pos)(ALib(Arena) *arena) {
 }
 
 ALIB_DEF void ALibProc(arena_pop_to)(ALib(Arena) *arena, ALib(u64) pos) {
-    ALib(u64) big_pos = ALib_ClampBot(ALIB_ARENA_HEADER_SIZE, pos);
+    ALib(u64) big_pos = ALibClampBot(ALIB_ARENA_HEADER_SIZE, pos);
     ALib(Arena) *current = arena->current;
 
     for(ALib(Arena) *prev = 0; current->base_pos >= big_pos; current = prev) {
         prev = current->prev;
         current->pos = ALIB_ARENA_HEADER_SIZE;
         arena->free_size += current->res_size;
-        ALib_SLLStackPush_N(arena->free_last, current, prev);
+        ALibSLLStackPush_N(arena->free_last, current, prev);
     }
     arena->current = current;
     ALib(u64) new_pos = big_pos - current->base_pos;
-    ALib_Ensure(new_pos <= current->pos);
+    ALibEnsure(new_pos <= current->pos);
     current->pos = new_pos;
 }
 

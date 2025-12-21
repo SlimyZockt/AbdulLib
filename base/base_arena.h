@@ -27,8 +27,8 @@ ALibStruct(ALib(ArenaParams)){
 };
 
 ALibStruct(ALib(Arena)){
-    ALib(Arena) *prev;    // previous arena in chain
-    ALib(Arena) *current; // current arena in chain
+    ALib(Arena) *prev;
+    ALib(Arena) *current;
     ALib(Arena) *free_last;
     ALib(u64) free_size;
     ALib(ArenaFlags) flags;
@@ -41,7 +41,7 @@ ALibStruct(ALib(Arena)){
     ALib(SourceLocation) loc;
 };
 
-ALib_StaticAssert(sizeof(ALib(Arena)) <= ALIB_ARENA_HEADER_SIZE, arena_header_size_check);
+ALibStaticAssert(sizeof(ALib(Arena)) <= ALIB_ARENA_HEADER_SIZE, arena_header_size_check);
 
 ALibStruct(ALib(Temp)){
     ALib(Arena) *arena;
@@ -49,9 +49,9 @@ ALibStruct(ALib(Temp)){
 };
 
 // Arena Functions
-alib_global ALib(u64) ALib(arena_default_reserve_size) = ALib_MB(64);
-alib_global ALib(u64) ALib(arena_default_commit_size)  = ALib_KB(64);
-alib_global ALib(ArenaFlags) ALib(arena_default_flags) = 0;
+ALibGlobal ALib(u64) ALib(arena_default_reserve_size) = ALibMB(64);
+ALibGlobal ALib(u64) ALib(arena_default_commit_size)  = ALibKB(64);
+ALibGlobal ALib(ArenaFlags) ALib(arena_default_flags) = 0;
 
 // arena creation/destruction
 ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params);
@@ -59,7 +59,7 @@ ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params);
         .reserve_size = ALib(arena_default_reserve_size),                    \
         .commit_size = ALib(arena_default_commit_size),                      \
         .flags = ALib(arena_default_flags),                                  \
-        .loc = (ALib_CallerLocation),                                        \
+        .loc = (ALibCallerLocation),                                        \
         __VA_ARGS__})
 
 ALIB_DEF void ALibProc(arena_release)(ALib(Arena) *arena);
@@ -80,6 +80,6 @@ ALIB_DEF void       ALibProc(alib_temp_end)(ALib(Temp) temp);
 // push helper macros
 #define alib_push_array_no_zero_aligned(a, T, c, align) (T *)ALibProc(arena_push)((a), sizeof(T)*(c), (align), (0))
 #define alib_push_array_aligned(a, T, c, align) (T *)ALibProc(arena_push)((a), sizeof(T)*(c), (align), (1))
-#define alib_push_array_no_zero(a, T, c) push_array_no_zero_aligned(a, T, c, ALib_Max(8, ALib_AlignOf(T)))
-#define alib_push_array(a, T, c) push_array_aligned(a, T, c, ALib_Max(8, ALib_AlignOf(T)))
+#define alib_push_array_no_zero(a, T, c) push_array_no_zero_aligned(a, T, c, ALibMax(8, ALibAlignOf(T)))
+#define alib_push_array(a, T, c) push_array_aligned(a, T, c, ALibMax(8, ALibAlignOf(T)))
 #endif
