@@ -163,26 +163,25 @@ int main(int argc, char **argv) {
             if (ws.ws_col != td.screen_width || ws.ws_row != td.screen_height) {
                 Temp temp={0};
                 DeferLoop(temp = temp_begin(g_arena), temp_end(temp)){
+                    u64 old_width = td.screen_width;
+                    u64 old_height = td.screen_height;
                     char *old_board = push_array(temp.arena, char, td.board_size);
                     memcpy(old_board, td.board, td.board_size);
                     arena_clear(term_arena);
-                    TermData old_td = td;
                     term_setup(&td, &ws, term_arena);
 
-                    u64 copy_width = (old_td.screen_width < td.screen_width) ? old_td.screen_width : td.screen_width;
-                    u64 copy_height = (old_td.screen_height < td.screen_height) ? old_td.screen_height : td.screen_height;
+                    u64 copy_width = (old_width < td.screen_width) ? old_width : td.screen_width;
+                    u64 copy_height = (old_height < td.screen_height) ? old_height : td.screen_height;
                     for EachIndex(y, copy_height) {
                         for EachIndex(x, copy_width) {
                             td.board[Pos(x, y, td.screen_width)] =
-                                old_td.board[Pos(x, y, old_td.screen_width)];
+                                old_board[Pos(x, y, old_width)];
                         }
                     }
 
-                    // Clamp cursor position
                     if (cx >= td.screen_width) cx = td.screen_width - 1;
                     if (cy >= td.screen_height - 1) cy = td.screen_height - 2;
 
-                    // Clear screen after resize
                     write(STDOUT_FILENO, CLEAR_SCREEN, 4);
                 }
             }
