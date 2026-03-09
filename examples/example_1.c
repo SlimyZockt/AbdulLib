@@ -144,6 +144,7 @@ int main(int argc, char **argv) {
     u64 frame_count = 0;
     const u64 sim_interval = 6;
     const u64 animaion_dur = 15;
+
     for (;;) {
         if(ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1){ // Resize Term
             if (ws.ws_col != td.screen_width || ws.ws_row != td.screen_height) {
@@ -177,14 +178,14 @@ int main(int argc, char **argv) {
 
         switch (read_key()) {
             case KEY_QUIT:  goto exit;
-            case KEY_UP:    if(cy > 0) cy -= 1;                        break;    
+            case KEY_UP:    if(cy > 0) cy -= 1;                           break;    
             case KEY_DOWN:  if(cy < td.screen_height-2) cy += 1;          break;  
-            case KEY_LEFT:  if(cx > 0) cx-= 1;                         break;  
+            case KEY_LEFT:  if(cx > 0) cx-= 1;                            break;  
             case KEY_RIGHT: if(cx < td.screen_width-1) cx+= 1;            break; 
             // case KEY_PLACE: if(!is_simulating) should_toggle_tile = 1; break; 
-            case KEY_PLACE: should_toggle_tile = 1; break; 
-            case KEY_PLAY:  is_simulating = !is_simulating;            break; 
-            default:                                                   break;
+            case KEY_PLACE: should_toggle_tile = 1;                       break; 
+            case KEY_PLAY:  is_simulating = !is_simulating;               break; 
+            default:                                                      break;
         }
 
         {// draw cursor
@@ -234,7 +235,6 @@ int main(int argc, char **argv) {
             write(STDOUT_FILENO, td.frame_buffer, td.frame_buffer_size);
         }
 
-    
         frame_count += 1;
         nanosleep(&ts, NULL);
         continue;

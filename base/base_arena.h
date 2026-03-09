@@ -49,9 +49,9 @@ ALibStruct(ALib(Temp)){
 };
 
 // Arena Functions
-ALibGlobal ALib(u64) ALib(arena_default_reserve_size) = ALibMB(64);
-ALibGlobal ALib(u64) ALib(arena_default_commit_size)  = ALibKB(64);
-ALibGlobal ALib(ArenaFlags) ALib(arena_default_flags) = 0;
+ALibglobal ALib(u64) ALib(arena_default_reserve_size) = ALibMB(64);
+ALibglobal ALib(u64) ALib(arena_default_commit_size)  = ALibKB(64);
+ALibglobal ALib(ArenaFlags) ALib(arena_default_flags) = 0;
 
 // arena creation/destruction
 ALIB_DEF ALib(Arena) *ALibProc(arena_alloc_)(ALib(ArenaParams) *params);
