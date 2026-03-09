@@ -1,0 +1,5 @@
+dv = 8
+firewall
+ whitelist = 0
+ blacklist = 0
+ built_from_admin_log_index_count = 3

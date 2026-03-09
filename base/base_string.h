@@ -6,6 +6,7 @@
 #define printfln ALibPrintfln
 #define printfln ALibPrintfln
 #define Str ALibStr
+#define String ALibString
 
 #endif
 
@@ -22,11 +23,11 @@
     )
 
 #define ALibPrintfln(str, ...) printf(str "\n", ##__VA_ARGS__)
-#define ALibStr(str) ((ALib(String)){(str), ALibArrayCount((str))})
+#define ALibStr(str) ((ALibString){(str), ALibArrayCount((str))})
 
-ALibStruct(ALib(String)) {
+ALibStruct(ALibString) {
     const char *data;
-    ALib(u64)  *len;
+    ALibU64  *len;
 };
 
 #endif

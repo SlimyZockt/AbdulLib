@@ -1,0 +1,34 @@
+dv = 8
+ws_cls = 1
+ id = 1
+ shelf_id
+  cl_id = 0
+  cl_revision = 0
+ comment = 0:
+ file_paths = 24
+  17:base/base_arena.c
+  17:base/base_arena.h
+  16:base/base_core.h
+  18:base/base_string.h
+  15:examples/build/
+  24:examples/build/example_1
+  24:examples/build/example_2
+  20:examples/example_1.c
+  20:examples/example_2.c
+  19:examples/example_2/
+  26:examples/example_2/build.c
+  25:examples/example_2/main.c
+  22:examples/game_of_life/
+  29:examples/game_of_life/build.c
+  28:examples/game_of_life/build/
+  40:examples/game_of_life/build/game_of_life
+  26:examples/game_of_life/main
+  28:examples/game_of_life/main.c
+  31:examples/game_of_life/run_build
+  26:examples/game_of_life/tags
+  14:examples/nob_1
+  16:examples/nob_1.c
+  14:examples/nob_2
+  16:examples/nob_2.c
+ is_open = 1
+-

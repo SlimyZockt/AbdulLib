@@ -32,6 +32,23 @@
 // #define Extract32 ALibExtract32
 //NOTE: Type -> Alignment
 # define AlionOf ALibAlignOf
+//NOTE: Primitive and core types
+# define U8 ALibU8
+# define U16 ALibU16
+# define U32 ALibU32
+# define U64 ALibU64
+# define I8 ALibI8
+# define I16 ALibI16
+# define I32 ALibI32
+# define I64 ALibI64
+# define B8 ALibB8
+# define B16 ALibB16
+# define B32 ALibB32
+# define B64 ALibB64
+# define F32 ALibF32
+# define F64 ALibF64
+# define VoidProc ALibVoidProc
+# define SourceLocation ALibSourceLocation
 //NOTE: Units
 # define KB ALibKB
 # define MB ALibMB
@@ -131,16 +148,6 @@
 # define SLLStackPush ALibSLLStackPush
 # define SLLStackPop  ALibSLLStackPop
 
-# define ALib(name) name
-# define ALibProc(name) name
-# define ALibConst(name) name
-
-#else
-
-# define ALib(name) ALib##name
-# define ALibProc(name) alib_##name
-# define ALibConst(name) ALIB##name
-
 #endif
 
 #ifndef ALIB_DEF
@@ -172,17 +179,17 @@
 #define ALibSwap(T,a,b) Statement(t__ = a; a = b; b = t__;)
 
 #if ALIB_ARCH_X64
-# define ALibIntFromPtr(ptr) ((ALib(u64))(ptr))
+# define ALibIntFromPtr(ptr) ((ALibU64)(ptr))
 #elif ALIB_ARCH_X86
-# define ALibIntFromPtr(ptr) ((ALib(u32))(ptr))
+# define ALibIntFromPtr(ptr) ((ALibU32)(ptr))
 #else
 # error Missing pointer-to-integer cast for this architecture.
 #endif
 
 #define ALibPtrFromInt(i) (void*)(i)
 
-#define ALibCompose64Bit(a,b)  ((((ALib(u64))a) << 32) | ((ALib(u64))b))
-#define ALibCompose32Bit(a,b)  ((((ALib(u32))a) << 16) | ((ALib(u32))b))
+#define ALibCompose64Bit(a,b)  ((((ALibU64)a) << 32) | ((ALibU64)b))
+#define ALibCompose32Bit(a,b)  ((((ALibU32)a) << 16) | ((ALibU32)b))
 #define ALibAlignPow2(x,b)     (((x) + (b) - 1)&(~((b) - 1)))
 #define ALibAlignDownPow2(x,b) ((x)&(~((b) - 1)))
 #define ALibAlignPadPow2(x,b)  ((0-(x)) & ((b) - 1))
@@ -207,30 +214,30 @@
 #endif
 
 //NOTE: Units
-#define ALibKB(n)  (((ALib(u64))(n)) << 10)
-#define ALibMB(n)  (((ALib(u64))(n)) << 20)
-#define ALibGB(n)  (((ALib(u64))(n)) << 30)
-#define ALibTB(n)  (((ALib(u64))(n)) << 40)
+#define ALibKB(n)  (((ALibU64)(n)) << 10)
+#define ALibMB(n)  (((ALibU64)(n)) << 20)
+#define ALibGB(n)  (((ALibU64)(n)) << 30)
+#define ALibTB(n)  (((ALibU64)(n)) << 40)
 #define ALibThousand(n)   ((n)*1000)
 #define ALibMillion(n)    ((n)*1000000)
 #define ALibBillion(n)    ((n)*1000000000)
 
 //NOTE: Types
-ALibTypedef(uint8_t, ALib(u8));
-ALibTypedef(uint16_t, ALib(u16));
-ALibTypedef(uint32_t, ALib(u32));
-ALibTypedef(uint64_t, ALib(u64));
-ALibTypedef(int8_t, ALib(i8));
-ALibTypedef(int16_t, ALib(i16));
-ALibTypedef(int32_t, ALib(i32));
-ALibTypedef(int64_t, ALib(i64));
-ALibTypedef(ALib(i8), ALib(b8));
-ALibTypedef(ALib(i16), ALib(b16));
-ALibTypedef(ALib(i32), ALib(b32));
-ALibTypedef(ALib(i64), ALib(b64));
-ALibTypedef(float, ALib(f32));
-ALibTypedef(double, ALib(f64));
-ALibTypedef(void, ALib(VoidProc(void)));
+ALibTypedef(uint8_t, ALibU8);
+ALibTypedef(uint16_t, ALibU16);
+ALibTypedef(uint32_t, ALibU32);
+ALibTypedef(uint64_t, ALibU64);
+ALibTypedef(int8_t, ALibI8);
+ALibTypedef(int16_t, ALibI16);
+ALibTypedef(int32_t, ALibI32);
+ALibTypedef(int64_t, ALibI64);
+ALibTypedef(ALibI8, ALibB8);
+ALibTypedef(ALibI16, ALibB16);
+ALibTypedef(ALibI32, ALibB32);
+ALibTypedef(ALibI64, ALibB64);
+ALibTypedef(float, ALibF32);
+ALibTypedef(double, ALibF64);
+ALibTypedef(void, ALibVoidProc(void));
 
 //NOTE: Asserts
 #if ALIB_COMPILER_MSVC 
@@ -241,12 +248,12 @@ ALibTypedef(void, ALib(VoidProc(void)));
 # error Unknown trap intrinsic for this compiler.
 #endif
 
-ALibStruct(ALib(SourceLocation)) {
+ALibStruct(ALibSourceLocation) {
     char* file;
     int line;
 };
 
-#define ALibCallerLocation ((ALib(SourceLocation)){__FILE__, __LINE__})
+#define ALibCallerLocation ((ALibSourceLocation){__FILE__, __LINE__})
 
 #define ALibEnsure(x) ALibStatement(if(!(x)) {ALibTrap();})
 
@@ -259,13 +266,13 @@ ALibStruct(ALib(SourceLocation)) {
 #define ALibInvalidPath        ALibAssert(!"Invalid Path!")
 #define ALibNotImplemented     ALibAssert(!"Not Implemented!")
 #define ALibNoOp               ((void)0)
-#define ALibStaticAssert(C, ID) ALibGlobal ALib(u8) ALibGlue(ID, __LINE__)[(C)?1:-1]
+#define ALibStaticAssert(C, ID) ALibGlobal ALibU8 ALibGlue(ID, __LINE__)[(C)?1:-1]
 
 //NOTE: Member Offsets
 #define ALibMember(T,m)                 (((T*)0)->m)
 #define ALibOffsetOf(T,m)               ALibIntFromPtr(&Member(T,m))
-#define ALibMemberFromOffset(T,ptr,off) (T)((((ALib(u8)*)ptr)+(off)))
-#define ALibCastFromMember(T,m,ptr)     (T*)(((ALib(u8)*)ptr) - ALibOffsetOf(T,m))
+#define ALibMemberFromOffset(T,ptr,off) (T)((((ALibU8*)ptr)+(off)))
+#define ALibCastFromMember(T,m,ptr)     (T*)(((ALibU8*)ptr) - ALibOffsetOf(T,m))
 
 #define ALibMin(a,b) (((a)<(b)) ? (a):(b))
 #define ALibMax(a,b) (((a)>(b)) ? (a):(b))
@@ -276,8 +283,8 @@ ALibStruct(ALib(SourceLocation)) {
 //NOTE: For-Loop Construct Macros
 #define ALibDeferLoop(begin, end)        for(int _i_ = ((begin), 0); !_i_; _i_ += 1, (end))
 #define ALibDeferLoopChecked(begin, end) for(int _i_ = 2 * !(begin); (_i_ == 2 ? ((end), 0) : !_i_); _i_ += 1, (end))
-#define ALibEachIndex(it, count) (ALib(u64) it = 0; it < (count); it += 1)
-#define ALibEachElement(it, array) (ALib(u64) it = 0; it < ALibArrayCount(array); it += 1)
+#define ALibEachIndex(it, count) (ALibU64 it = 0; it < (count); it += 1)
+#define ALibEachElement(it, array) (ALibU64 it = 0; it < ALibArrayCount(array); it += 1)
 
 //NOTE: Memory
 #define ALibMemoryCopy(dst, src, size)    memmove((dst), (src), (size))

@@ -1,0 +1,992 @@
+2026-03-09T17:59:23.128Z [INFO ] Workspace /home/myt/Documents/AbdulLib/ was using Ark version 0.13.3 being opened by Ark version 0.13.7. Upgrading the workspace version to 0.13.7
+2026-03-09T17:59:23.139Z [INFO ] Starting built-in server at /home/myt/Documents/AbdulLib/.ark_server/
+2026-03-09T17:59:23.139Z [DEBUG] Known Workspaces: 1
+2026-03-09T17:59:23.139Z [DEBUG] 	/home/myt/Documents/AbdulLib/
+2026-03-09T17:59:23.403Z [DEBUG] Network initialized
+2026-03-09T17:59:23.404Z [INFO ] Connecting a.abdulhafiz187@gmail.com |127.0.0.1:9000...
+2026-03-09T17:59:23.438Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T17:59:23.438Z [DEBUG] Reconciling everything...
+2026-03-09T17:59:23.449Z [INFO ] Reconciled Changes (10.62ms)
+2026-03-09T17:59:23.449Z [DEBUG]   Rebuild Files: 0.24ms (0.01ms loading cached data)
+2026-03-09T17:59:23.449Z [DEBUG]   Computing Checksums: 10.30ms
+2026-03-09T17:59:23.449Z [DEBUG]   Diffing: 0.07ms (0.07ms saving cached data)
+2026-03-09T17:59:23.449Z [DEBUG] Started processing 1 (LOGIN_START) - time waiting: 0ms
+2026-03-09T17:59:23.499Z [DEBUG] Started processing 2 (LOGIN) - time waiting: 0ms
+2026-03-09T17:59:23.499Z [DEBUG] Finished processing 1 (LOGIN_START) - time processing: 49ms
+2026-03-09T17:59:23.519Z [INFO ] Connected
+2026-03-09T17:59:23.519Z [DEBUG] Started processing 3 (ADMIN_LOG_SYNC) - time waiting: 0ms
+2026-03-09T17:59:23.519Z [DEBUG] Finished processing 2 (LOGIN) - time processing: 20ms
+2026-03-09T17:59:23.539Z [INFO ] Finished syncing admin log, nothing received
+2026-03-09T17:59:23.539Z [DEBUG] Started processing 4 (PROJECT_SYNC) - time waiting: 0ms
+2026-03-09T17:59:23.539Z [DEBUG] Finished processing 3 (ADMIN_LOG_SYNC) - time processing: 19ms
+2026-03-09T17:59:23.559Z [INFO ] Finished syncing project alpha
+2026-03-09T17:59:23.559Z [DEBUG] Finished processing 4 (PROJECT_SYNC) - time processing: 20ms
+2026-03-09T17:59:23.869Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T17:59:23.869Z [DEBUG] Reconciling everything...
+2026-03-09T17:59:23.870Z [INFO ] Reconciled Changes (0.23ms)
+2026-03-09T17:59:23.870Z [DEBUG]   Rebuild Files: 0.19ms (0.00ms loading cached data)
+2026-03-09T17:59:23.870Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T17:59:23.870Z [DEBUG]   Diffing: 0.04ms (0.04ms saving cached data)
+2026-03-09T18:05:37.894Z [ERROR] Cannot get cl 0 since we don't have information about it (actually we don't know any cls, it must be an empty project!)
+2026-03-09T18:05:43.864Z [DEBUG] Started processing queued request ADMIN_LOG_SYNC (id: 1)
+2026-03-09T18:05:43.864Z [DEBUG] Started processing 5 (ADMIN_LOG_SYNC) - time waiting: 0ms
+2026-03-09T18:05:43.881Z [INFO ] Finished syncing admin log, nothing received
+2026-03-09T18:05:43.881Z [DEBUG] Started processing 6 (PROJECT_SYNC) - time waiting: 0ms
+2026-03-09T18:05:43.881Z [DEBUG] Finished processing 5 (ADMIN_LOG_SYNC) - time processing: 17ms
+2026-03-09T18:05:43.902Z [INFO ] Finished syncing project alpha
+2026-03-09T18:05:43.902Z [DEBUG] Finished processing 6 (PROJECT_SYNC) - time processing: 20ms
+2026-03-09T18:05:44.202Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:05:44.202Z [DEBUG] Reconciling everything...
+2026-03-09T18:05:44.202Z [INFO ] Reconciled Changes (0.28ms)
+2026-03-09T18:05:44.202Z [DEBUG]   Rebuild Files: 0.20ms (0.00ms loading cached data)
+2026-03-09T18:05:44.202Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:05:44.202Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:05:44.202Z [DEBUG] Finished processing queued request ADMIN_LOG_SYNC (id: 1)
+2026-03-09T18:06:18.547Z [DEBUG] Started processing 7 (SHELVE_BEGIN) - time waiting: 0ms
+2026-03-09T18:06:18.564Z [DEBUG] Finished processing 7 (SHELVE_BEGIN) - time processing: 16ms
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path .ark_ignore
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path .gitignore
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path LICENSE
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_arena.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_arena.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_context.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_core.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_inc.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_inc.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path base/base_string.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path build/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path core/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path core/os/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/.project.gf
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/build/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/build/example_1
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/build/example_2
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/example_1.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/example_2.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/nob_1
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/nob_1.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/nob_2
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path examples/nob_2.c
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path vendored/
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path vendored/arena.h.old
+2026-03-09T18:06:18.564Z [DEBUG] Requesting asset id for path vendored/nob.h
+2026-03-09T18:06:18.564Z [DEBUG] Requesting 28 asset ids
+2026-03-09T18:06:18.564Z [DEBUG] Started processing 8 (SHELVE_RENAMES) - time waiting: 0ms
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name .ark_ignore for asset id 1 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name .gitignore for asset id 2 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name LICENSE for asset id 3 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base/ for asset id 4 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_arena.c for asset id 5 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_arena.h for asset id 6 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_context.h for asset id 7 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_core.h for asset id 8 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_inc.c for asset id 9 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_inc.h for asset id 10 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name base_string.h for asset id 11 with parent 4
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name build/ for asset id 12 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name core/ for asset id 13 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name os/ for asset id 14 with parent 13
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name examples/ for asset id 15 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name .project.gf for asset id 16 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name build/ for asset id 17 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name example_1 for asset id 18 with parent 17
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name example_2 for asset id 19 with parent 17
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name example_1.c for asset id 20 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name example_2.c for asset id 21 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name nob_1 for asset id 22 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name nob_1.c for asset id 23 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name nob_2 for asset id 24 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name nob_2.c for asset id 25 with parent 15
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name vendored/ for asset id 26 with parent 0
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name arena.h.old for asset id 27 with parent 26
+2026-03-09T18:06:18.564Z [DEBUG] Received asset name nob.h for asset id 28 with parent 26
+2026-03-09T18:06:18.564Z [DEBUG] Finished processing 8 (SHELVE_RENAMES) - time processing: 0ms
+2026-03-09T18:06:18.564Z [DEBUG] Started processing 9 (SHELVE) - time waiting: 0ms
+2026-03-09T18:06:18.564Z [DEBUG] Finished processing 9 (SHELVE) - time processing: 0ms
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 1, [asset:1], size: 2598, checksum: 5607115399864452266)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 2, [asset:3], size: 1066, checksum: 14481378436408229077)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 3, [asset:5], size: 6922, checksum: 134894116640737167)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 4, [asset:6], size: 3005, checksum: 9557228610895939406)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 5, [asset:7], size: 3990, checksum: 14170262926114512564)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 6, [asset:8], size: 14098, checksum: 12759545234676739383)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 7, [asset:9], size: 26, checksum: 16954577542622464815)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 8, [asset:10], size: 331, checksum: 8540027871554278936)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 9, [asset:11], size: 861, checksum: 864971899651442585)
+2026-03-09T18:06:18.564Z [DEBUG] Upload Finished (transfer_id: 10, [asset:16], size: 99, checksum: 5218574673658211531)
+2026-03-09T18:06:18.565Z [DEBUG] Started processing 10 (UPLOAD_ASSET) - time waiting: 0ms
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 11, [asset:18], size: 36376, checksum: 4872094036662254125)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 12, [asset:19], size: 27184, checksum: 17545132917086344613)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 13, [asset:20], size: 8617, checksum: 16332596453898956405)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 14, [asset:21], size: 384, checksum: 18014893731322010541)
+2026-03-09T18:06:18.565Z [DEBUG] Started processing 11 (UPLOAD_ASSET) - time waiting: 0ms
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 15, [asset:22], size: 45688, checksum: 979070562415288112)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 16, [asset:23], size: 731, checksum: 6724184652319004370)
+2026-03-09T18:06:18.565Z [DEBUG] Started processing 12 (UPLOAD_ASSET) - time waiting: 0ms
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 17, [asset:24], size: 45688, checksum: 7976373697303737602)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 18, [asset:25], size: 731, checksum: 13995378157017720704)
+2026-03-09T18:06:18.565Z [DEBUG] Upload Finished (transfer_id: 19, [asset:27], size: 14603, checksum: 946663069808525228)
+2026-03-09T18:06:18.565Z [DEBUG] Started processing 13 (UPLOAD_ASSET) - time waiting: 0ms
+2026-03-09T18:06:18.566Z [DEBUG] Finished processing 10 (UPLOAD_ASSET) - time processing: 1ms
+2026-03-09T18:06:18.566Z [DEBUG] Upload Finished (transfer_id: 20, [asset:28], size: 91851, checksum: 7361467167996884304)
+2026-03-09T18:06:18.566Z [DEBUG] Started processing 14 (UPLOAD_ASSET) - time waiting: 0ms
+2026-03-09T18:06:18.566Z [DEBUG] Finished processing 11 (UPLOAD_ASSET) - time processing: 1ms
+2026-03-09T18:06:18.567Z [DEBUG] Finished processing 12 (UPLOAD_ASSET) - time processing: 1ms
+2026-03-09T18:06:18.580Z [DEBUG] Rebuilding [cl:1] shelf cache
+2026-03-09T18:06:18.607Z [DEBUG] Finished processing 13 (UPLOAD_ASSET) - time processing: 41ms
+2026-03-09T18:06:18.607Z [DEBUG] Started processing 15 (SHELVE_END) - time waiting: 0ms
+2026-03-09T18:06:18.607Z [DEBUG] Finished processing 14 (UPLOAD_ASSET) - time processing: 41ms
+2026-03-09T18:06:18.608Z [INFO ] Finished shelving 1 in 60ms
+2026-03-09T18:06:18.608Z [DEBUG] Started processing 16 (SHELVE_SYNC) - time waiting: 0ms
+2026-03-09T18:06:18.608Z [DEBUG] Finished processing 15 (SHELVE_END) - time processing: 0ms
+2026-03-09T18:06:18.664Z [INFO ] Finished syncing changelist 1 (1 revisions)
+2026-03-09T18:06:18.664Z [DEBUG] Opening: /home/myt/Documents/AbdulLib/.ark/1/cls/000/1/cl
+2026-03-09T18:06:18.664Z [DEBUG] Rebuilding [cl:1#1] shelf cache
+2026-03-09T18:06:18.664Z [DEBUG] Started processing 17 (COMMIT) - time waiting: 0ms
+2026-03-09T18:06:18.664Z [DEBUG] Finished processing 16 (SHELVE_SYNC) - time processing: 56ms
+2026-03-09T18:06:18.683Z [INFO ] Committed changelist 1
+2026-03-09T18:06:18.683Z [DEBUG] Finished processing 17 (COMMIT) - time processing: 19ms
+2026-03-09T18:06:18.965Z [DEBUG] Reconciling paths, but there wasn't any path to reconcile
+2026-03-09T18:06:18.965Z [DEBUG] Started processing queued request PROJECT_SYNC (id: 2)
+2026-03-09T18:06:18.965Z [DEBUG] Started processing 18 (PROJECT_SYNC) - time waiting: 0ms
+2026-03-09T18:06:18.985Z [DEBUG] Opening: /home/myt/Documents/AbdulLib/.ark/1/cls/000/1/cl
+2026-03-09T18:06:18.985Z [INFO ] Finished syncing project alpha
+2026-03-09T18:06:18.985Z [DEBUG] Finished processing 18 (PROJECT_SYNC) - time processing: 19ms
+2026-03-09T18:06:18.985Z [DEBUG] Finished processing queued request PROJECT_SYNC (id: 2)
+2026-03-09T18:08:17.545Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:08:17.846Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:08:17.846Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:08:17.847Z [INFO ] Reconciled Changes (1.01ms)
+2026-03-09T18:08:17.847Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:08:17.847Z [DEBUG]   Computing Checksums: 0.92ms
+2026-03-09T18:08:17.847Z [DEBUG]   Diffing: 0.07ms (0.07ms saving cached data)
+2026-03-09T18:13:32.499Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: MODIFIED
+2026-03-09T18:13:32.800Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T18:13:32.800Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T18:13:32.801Z [INFO ] Reconciled Changes (0.95ms)
+2026-03-09T18:13:32.801Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:13:32.801Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:13:32.801Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T18:13:51.765Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: ADDED | MODIFIED | REMOVED
+2026-03-09T18:13:52.066Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T18:13:52.066Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T18:13:52.067Z [INFO ] Reconciled Changes (0.92ms)
+2026-03-09T18:13:52.067Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:13:52.067Z [DEBUG]   Computing Checksums: 0.78ms
+2026-03-09T18:13:52.067Z [DEBUG]   Diffing: 0.12ms (0.12ms saving cached data)
+2026-03-09T18:15:53.860Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T18:15:54.161Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:15:54.161Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:15:54.162Z [INFO ] Reconciled Changes (1.05ms)
+2026-03-09T18:15:54.162Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:15:54.162Z [DEBUG]   Computing Checksums: 0.92ms
+2026-03-09T18:15:54.162Z [DEBUG]   Diffing: 0.12ms (0.12ms saving cached data)
+2026-03-09T18:16:25.667Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | REMOVED
+2026-03-09T18:16:25.968Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:16:25.968Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:16:25.969Z [INFO ] Reconciled Changes (0.97ms)
+2026-03-09T18:16:25.969Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:16:25.969Z [DEBUG]   Computing Checksums: 0.86ms
+2026-03-09T18:16:25.969Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:22:41.400Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h~' changed: ADDED | MODIFIED
+2026-03-09T18:22:41.400Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T18:22:41.433Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T18:22:41.467Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:22:41.767Z [DEBUG] Reconciling 3 paths
+2026-03-09T18:22:41.767Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:22:41.767Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h~
+2026-03-09T18:22:41.767Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/base/base_arena.h~
+2026-03-09T18:22:41.767Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:22:41.767Z [DEBUG] Cancelling reconcile after 0.000024s
+2026-03-09T18:22:42.068Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:22:42.068Z [DEBUG] Reconciling everything...
+2026-03-09T18:22:42.070Z [INFO ] Reconciled Changes (1.28ms)
+2026-03-09T18:22:42.070Z [DEBUG]   Rebuild Files: 0.30ms (0.00ms loading cached data)
+2026-03-09T18:22:42.070Z [DEBUG]   Computing Checksums: 0.86ms
+2026-03-09T18:22:42.070Z [DEBUG]   Diffing: 0.11ms (0.11ms saving cached data)
+2026-03-09T18:22:48.290Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED | REMOVED
+2026-03-09T18:22:48.591Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_1
+2026-03-09T18:22:48.591Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1
+2026-03-09T18:22:48.591Z [INFO ] Reconciled Changes (0.96ms)
+2026-03-09T18:22:48.592Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:22:48.592Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T18:22:48.592Z [DEBUG]   Diffing: 0.10ms (0.10ms saving cached data)
+2026-03-09T18:23:35.700Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:23:36.001Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:23:36.001Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:23:36.001Z [INFO ] Reconciled Changes (0.87ms)
+2026-03-09T18:23:36.001Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:23:36.001Z [DEBUG]   Computing Checksums: 0.72ms
+2026-03-09T18:23:36.001Z [DEBUG]   Diffing: 0.13ms (0.13ms saving cached data)
+2026-03-09T18:24:16.136Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h~' changed: MOVED | MOVED_TO
+2026-03-09T18:24:16.136Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:24:16.153Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:24:16.454Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:24:16.454Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T18:24:16.454Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h~
+2026-03-09T18:24:16.454Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/base/base_arena.h~
+2026-03-09T18:24:16.454Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:24:16.454Z [DEBUG] Cancelling reconcile after 0.000026s
+2026-03-09T18:24:16.755Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:24:16.755Z [DEBUG] Reconciling everything...
+2026-03-09T18:24:16.756Z [INFO ] Reconciled Changes (1.15ms)
+2026-03-09T18:24:16.756Z [DEBUG]   Rebuild Files: 0.23ms (0.00ms loading cached data)
+2026-03-09T18:24:16.756Z [DEBUG]   Computing Checksums: 0.82ms
+2026-03-09T18:24:16.756Z [DEBUG]   Diffing: 0.10ms (0.10ms saving cached data)
+2026-03-09T18:24:28.661Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:24:28.962Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:24:28.962Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:24:28.963Z [INFO ] Reconciled Changes (0.97ms)
+2026-03-09T18:24:28.963Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:24:28.963Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T18:24:28.963Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:24:33.293Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:24:33.293Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:24:33.327Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:24:33.628Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:24:33.628Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:24:33.628Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1.c~
+2026-03-09T18:24:33.628Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/example_1.c~
+2026-03-09T18:24:33.628Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:24:33.628Z [DEBUG] Cancelling reconcile after 0.00003s
+2026-03-09T18:24:33.929Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:24:33.929Z [DEBUG] Reconciling everything...
+2026-03-09T18:24:33.930Z [INFO ] Reconciled Changes (1.24ms)
+2026-03-09T18:24:33.930Z [DEBUG]   Rebuild Files: 0.24ms (0.00ms loading cached data)
+2026-03-09T18:24:33.930Z [DEBUG]   Computing Checksums: 0.86ms
+2026-03-09T18:24:33.930Z [DEBUG]   Diffing: 0.13ms (0.13ms saving cached data)
+2026-03-09T18:24:53.779Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:24:54.079Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:24:54.079Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:24:54.080Z [INFO ] Reconciled Changes (0.96ms)
+2026-03-09T18:24:54.080Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:24:54.080Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T18:24:54.080Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:25:47.593Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/' changed: ADDED
+2026-03-09T18:25:47.894Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/
+2026-03-09T18:25:47.894Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/
+2026-03-09T18:25:47.894Z [INFO ] Reconciled Changes (0.11ms)
+2026-03-09T18:25:47.894Z [DEBUG]   Rebuild Files: 0.03ms (0.00ms loading cached data)
+2026-03-09T18:25:47.894Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:25:47.894Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:26:07.242Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/build/example_1' changed: REMOVED
+2026-03-09T18:26:07.242Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/build/' changed: REMOVED
+2026-03-09T18:26:07.242Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/build/example_2' changed: REMOVED
+2026-03-09T18:26:07.543Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/build/
+2026-03-09T18:26:07.543Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/build/
+2026-03-09T18:26:07.543Z [INFO ] Reconciled Changes (0.09ms)
+2026-03-09T18:26:07.543Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:26:07.543Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:26:07.543Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T18:26:16.590Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:16.590Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/example_1.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:16.891Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:26:16.891Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1.c
+2026-03-09T18:26:16.891Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/example_1.c
+2026-03-09T18:26:16.892Z [INFO ] Reconciled Changes (1.06ms)
+2026-03-09T18:26:16.893Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:26:16.893Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T18:26:16.893Z [DEBUG]   Diffing: 0.16ms (0.16ms saving cached data)
+2026-03-09T18:26:25.320Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/nob_1.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:25.320Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:25.621Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:26:25.621Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/nob_1.c
+2026-03-09T18:26:25.621Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:26:25.622Z [INFO ] Reconciled Changes (0.92ms)
+2026-03-09T18:26:25.622Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:26:25.622Z [DEBUG]   Computing Checksums: 0.81ms
+2026-03-09T18:26:25.622Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:26:28.448Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/example_1.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:28.448Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:28.749Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:26:28.749Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:26:28.749Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/example_1.c
+2026-03-09T18:26:28.750Z [INFO ] Reconciled Changes (0.97ms)
+2026-03-09T18:26:28.750Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:26:28.750Z [DEBUG]   Computing Checksums: 0.82ms
+2026-03-09T18:26:28.750Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T18:26:36.392Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/' changed: ADDED
+2026-03-09T18:26:36.693Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/
+2026-03-09T18:26:36.693Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/
+2026-03-09T18:26:36.693Z [INFO ] Reconciled Changes (0.10ms)
+2026-03-09T18:26:36.693Z [DEBUG]   Rebuild Files: 0.03ms (0.00ms loading cached data)
+2026-03-09T18:26:36.693Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:26:36.693Z [DEBUG]   Diffing: 0.06ms (0.06ms saving cached data)
+2026-03-09T18:26:45.388Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_1' changed: REMOVED
+2026-03-09T18:26:45.406Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/nob_1' changed: REMOVED
+2026-03-09T18:26:45.406Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/nob_2' changed: REMOVED
+2026-03-09T18:26:45.706Z [DEBUG] Reconciling 3 paths
+2026-03-09T18:26:45.706Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/nob_1
+2026-03-09T18:26:45.706Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/nob_2
+2026-03-09T18:26:45.706Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_1
+2026-03-09T18:26:45.706Z [INFO ] Reconciled Changes (0.11ms)
+2026-03-09T18:26:45.706Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:26:45.706Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:26:45.706Z [DEBUG]   Diffing: 0.10ms (0.09ms saving cached data)
+2026-03-09T18:26:49.970Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:49.970Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/nob_2.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:49.970Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/nob_2.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:49.970Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/example_2.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:50.271Z [DEBUG] Reconciling 4 paths
+2026-03-09T18:26:50.271Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/nob_2.c
+2026-03-09T18:26:50.271Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2.c
+2026-03-09T18:26:50.271Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/nob_2.c
+2026-03-09T18:26:50.271Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/example_2.c
+2026-03-09T18:26:50.272Z [INFO ] Reconciled Changes (0.98ms)
+2026-03-09T18:26:50.272Z [DEBUG]   Rebuild Files: 0.04ms (0.00ms loading cached data)
+2026-03-09T18:26:50.272Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:26:50.272Z [DEBUG]   Diffing: 0.11ms (0.11ms saving cached data)
+2026-03-09T18:26:55.306Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/example_2.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:55.306Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:55.607Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:26:55.607Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:26:55.607Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/example_2.c
+2026-03-09T18:26:55.608Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T18:26:55.608Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:26:55.608Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T18:26:55.608Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:26:59.068Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/nob_2.c' changed: MOVED | MOVED_FROM
+2026-03-09T18:26:59.068Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/build.c' changed: MOVED | MOVED_TO
+2026-03-09T18:26:59.369Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:26:59.369Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/nob_2.c
+2026-03-09T18:26:59.369Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/build.c
+2026-03-09T18:26:59.370Z [INFO ] Reconciled Changes (0.90ms)
+2026-03-09T18:26:59.370Z [DEBUG]   Rebuild Files: 0.03ms (0.00ms loading cached data)
+2026-03-09T18:26:59.370Z [DEBUG]   Computing Checksums: 0.78ms
+2026-03-09T18:26:59.370Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:27:04.938Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:27:05.239Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/build.c
+2026-03-09T18:27:05.239Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/build.c
+2026-03-09T18:27:05.240Z [INFO ] Reconciled Changes (0.93ms)
+2026-03-09T18:27:05.240Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:27:05.240Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:27:05.240Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:27:13.902Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:27:13.902Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:27:13.952Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:27:14.253Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:27:14.253Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:14.253Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c~
+2026-03-09T18:27:14.253Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/example_2/main.c~
+2026-03-09T18:27:14.253Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:27:14.253Z [DEBUG] Cancelling reconcile after 0.000037s
+2026-03-09T18:27:14.554Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:27:14.554Z [DEBUG] Reconciling everything...
+2026-03-09T18:27:14.555Z [INFO ] Reconciled Changes (1.26ms)
+2026-03-09T18:27:14.555Z [DEBUG]   Rebuild Files: 0.26ms (0.00ms loading cached data)
+2026-03-09T18:27:14.555Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T18:27:14.555Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T18:27:15.975Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:27:16.276Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:16.276Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:16.277Z [INFO ] Reconciled Changes (0.93ms)
+2026-03-09T18:27:16.277Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:27:16.277Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T18:27:16.277Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T18:27:18.366Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:27:18.667Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:18.667Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:18.668Z [INFO ] Reconciled Changes (0.96ms)
+2026-03-09T18:27:18.668Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:27:18.668Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T18:27:18.668Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:27:24.989Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:27:24.989Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:27:25.006Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:27:25.306Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:27:25.306Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:25.306Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c~
+2026-03-09T18:27:25.306Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/example_2/main.c~
+2026-03-09T18:27:25.306Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:27:25.306Z [DEBUG] Cancelling reconcile after 0.000031s
+2026-03-09T18:27:25.607Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:27:25.607Z [DEBUG] Reconciling everything...
+2026-03-09T18:27:25.609Z [INFO ] Reconciled Changes (1.23ms)
+2026-03-09T18:27:25.609Z [DEBUG]   Rebuild Files: 0.26ms (0.00ms loading cached data)
+2026-03-09T18:27:25.609Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T18:27:25.609Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T18:27:34.922Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:27:35.223Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:35.223Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:35.224Z [INFO ] Reconciled Changes (0.94ms)
+2026-03-09T18:27:35.224Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:27:35.224Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T18:27:35.224Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T18:27:44.254Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:27:44.554Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:44.554Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/main.c
+2026-03-09T18:27:44.555Z [INFO ] Reconciled Changes (1.02ms)
+2026-03-09T18:27:44.555Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:27:44.555Z [DEBUG]   Computing Checksums: 0.86ms
+2026-03-09T18:27:44.555Z [DEBUG]   Diffing: 0.14ms (0.14ms saving cached data)
+2026-03-09T18:28:13.050Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:28:13.351Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:28:13.351Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:28:13.352Z [INFO ] Reconciled Changes (0.90ms)
+2026-03-09T18:28:13.352Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:28:13.352Z [DEBUG]   Computing Checksums: 0.81ms
+2026-03-09T18:28:13.352Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:28:54.958Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:28:55.259Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:28:55.259Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:28:55.260Z [INFO ] Reconciled Changes (0.90ms)
+2026-03-09T18:28:55.260Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:28:55.260Z [DEBUG]   Computing Checksums: 0.80ms
+2026-03-09T18:28:55.260Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T18:28:59.088Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:28:59.088Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:28:59.122Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:28:59.423Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:28:59.423Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:28:59.423Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c~
+2026-03-09T18:28:59.423Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/build.c~
+2026-03-09T18:28:59.423Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:28:59.423Z [DEBUG] Cancelling reconcile after 0.00003s
+2026-03-09T18:28:59.724Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:28:59.724Z [DEBUG] Reconciling everything...
+2026-03-09T18:28:59.725Z [INFO ] Reconciled Changes (1.14ms)
+2026-03-09T18:28:59.725Z [DEBUG]   Rebuild Files: 0.24ms (0.00ms loading cached data)
+2026-03-09T18:28:59.725Z [DEBUG]   Computing Checksums: 0.80ms
+2026-03-09T18:28:59.725Z [DEBUG]   Diffing: 0.10ms (0.08ms saving cached data)
+2026-03-09T18:29:05.944Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:29:06.245Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/run_build
+2026-03-09T18:29:06.245Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/run_build
+2026-03-09T18:29:06.246Z [INFO ] Reconciled Changes (0.88ms)
+2026-03-09T18:29:06.246Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:29:06.246Z [DEBUG]   Computing Checksums: 0.78ms
+2026-03-09T18:29:06.246Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:29:15.058Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build/' changed: ADDED
+2026-03-09T18:29:15.359Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build/
+2026-03-09T18:29:15.359Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build/
+2026-03-09T18:29:15.359Z [INFO ] Reconciled Changes (0.09ms)
+2026-03-09T18:29:15.359Z [DEBUG]   Rebuild Files: 0.03ms (0.00ms loading cached data)
+2026-03-09T18:29:15.359Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T18:29:15.359Z [DEBUG]   Diffing: 0.06ms (0.06ms saving cached data)
+2026-03-09T18:29:26.496Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:29:26.496Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:29:26.514Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:29:26.814Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:29:26.814Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:26.814Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c~
+2026-03-09T18:29:26.814Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/build.c~
+2026-03-09T18:29:26.814Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:29:26.814Z [DEBUG] Cancelling reconcile after 0.000029s
+2026-03-09T18:29:27.115Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:29:27.115Z [DEBUG] Reconciling everything...
+2026-03-09T18:29:27.116Z [INFO ] Reconciled Changes (1.22ms)
+2026-03-09T18:29:27.116Z [DEBUG]   Rebuild Files: 0.32ms (0.00ms loading cached data)
+2026-03-09T18:29:27.116Z [DEBUG]   Computing Checksums: 0.78ms
+2026-03-09T18:29:27.116Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T18:29:42.635Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:29:42.936Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:42.936Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:42.937Z [INFO ] Reconciled Changes (0.92ms)
+2026-03-09T18:29:42.937Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:29:42.937Z [DEBUG]   Computing Checksums: 0.82ms
+2026-03-09T18:29:42.937Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T18:29:49.292Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:29:49.592Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:49.592Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:49.593Z [INFO ] Reconciled Changes (0.99ms)
+2026-03-09T18:29:49.593Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:29:49.593Z [DEBUG]   Computing Checksums: 0.89ms
+2026-03-09T18:29:49.593Z [DEBUG]   Diffing: 0.08ms (0.08ms saving cached data)
+2026-03-09T18:29:54.258Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:29:54.559Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:54.559Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:29:54.560Z [INFO ] Reconciled Changes (0.99ms)
+2026-03-09T18:29:54.560Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:29:54.560Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T18:29:54.560Z [DEBUG]   Diffing: 0.12ms (0.12ms saving cached data)
+2026-03-09T18:30:00.111Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:30:00.412Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:30:00.412Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:30:00.413Z [INFO ] Reconciled Changes (0.95ms)
+2026-03-09T18:30:00.413Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:30:00.413Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T18:30:00.413Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T18:30:01.348Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build' changed: MOVED | MOVED_FROM
+2026-03-09T18:30:01.348Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old' changed: MOVED | MOVED_TO
+2026-03-09T18:30:01.415Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:30:01.716Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:30:01.716Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/run_build
+2026-03-09T18:30:01.716Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old
+2026-03-09T18:30:01.716Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old
+2026-03-09T18:30:01.716Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:30:01.716Z [DEBUG] Cancelling reconcile after 0.000038s
+2026-03-09T18:30:02.017Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:30:02.017Z [DEBUG] Reconciling everything...
+2026-03-09T18:30:02.018Z [INFO ] Reconciled Changes (1.23ms)
+2026-03-09T18:30:02.018Z [DEBUG]   Rebuild Files: 0.30ms (0.00ms loading cached data)
+2026-03-09T18:30:02.018Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:30:02.018Z [DEBUG]   Diffing: 0.10ms (0.09ms saving cached data)
+2026-03-09T18:30:37.035Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:30:37.336Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:30:37.336Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:30:37.337Z [INFO ] Reconciled Changes (1.07ms)
+2026-03-09T18:30:37.337Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:30:37.337Z [DEBUG]   Computing Checksums: 0.92ms
+2026-03-09T18:30:37.337Z [DEBUG]   Diffing: 0.13ms (0.13ms saving cached data)
+2026-03-09T18:30:46.483Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json' changed: MOVED | MOVED_TO
+2026-03-09T18:30:46.784Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T18:30:46.784Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T18:30:46.785Z [INFO ] Reconciled Changes (0.96ms)
+2026-03-09T18:30:46.785Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:30:46.785Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T18:30:46.785Z [DEBUG]   Diffing: 0.10ms (0.10ms saving cached data)
+2026-03-09T18:35:47.883Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c~' changed: ADDED | MODIFIED
+2026-03-09T18:35:47.883Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T18:35:47.916Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T18:35:48.217Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:35:48.217Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T18:35:48.217Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c~
+2026-03-09T18:35:48.217Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/base/base_arena.c~
+2026-03-09T18:35:48.217Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:35:48.217Z [DEBUG] Cancelling reconcile after 0.000033s
+2026-03-09T18:35:48.518Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:35:48.518Z [DEBUG] Reconciling everything...
+2026-03-09T18:35:48.519Z [INFO ] Reconciled Changes (1.26ms)
+2026-03-09T18:35:48.519Z [DEBUG]   Rebuild Files: 0.30ms (0.00ms loading cached data)
+2026-03-09T18:35:48.519Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:35:48.519Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T18:37:53.125Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c~' changed: ADDED | MODIFIED
+2026-03-09T18:37:53.125Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T18:37:53.159Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T18:37:53.460Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:37:53.460Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T18:37:53.460Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c~
+2026-03-09T18:37:53.460Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/base/base_arena.c~
+2026-03-09T18:37:53.460Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:37:53.460Z [DEBUG] Cancelling reconcile after 0.000022s
+2026-03-09T18:37:53.761Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:37:53.761Z [DEBUG] Reconciling everything...
+2026-03-09T18:37:53.762Z [INFO ] Reconciled Changes (1.33ms)
+2026-03-09T18:37:53.762Z [DEBUG]   Rebuild Files: 0.30ms (0.00ms loading cached data)
+2026-03-09T18:37:53.762Z [DEBUG]   Computing Checksums: 0.90ms
+2026-03-09T18:37:53.762Z [DEBUG]   Diffing: 0.13ms (0.11ms saving cached data)
+2026-03-09T18:39:10.655Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T18:39:10.971Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T18:39:10.971Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T18:39:10.972Z [INFO ] Reconciled Changes (1.05ms)
+2026-03-09T18:39:10.972Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T18:39:10.972Z [DEBUG]   Computing Checksums: 0.90ms
+2026-03-09T18:39:10.972Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T18:40:18.653Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/' changed: ADDED
+2026-03-09T18:40:18.687Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/clangd/index/main.c.6C71102C043D2A41.idx' changed: MODIFIED | MOVED | MOVED_TO
+2026-03-09T18:40:18.988Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/.cache/
+2026-03-09T18:40:18.988Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/.cache/
+2026-03-09T18:40:18.989Z [INFO ] Reconciled Changes (1.08ms)
+2026-03-09T18:40:18.989Z [DEBUG]   Rebuild Files: 0.08ms (0.00ms loading cached data)
+2026-03-09T18:40:18.989Z [DEBUG]   Computing Checksums: 0.86ms
+2026-03-09T18:40:18.989Z [DEBUG]   Diffing: 0.15ms (0.14ms saving cached data)
+2026-03-09T18:43:26.251Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/example_2/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:43:26.553Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/example_2/build.c
+2026-03-09T18:43:26.553Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/example_2/build.c
+2026-03-09T18:43:26.554Z [INFO ] Reconciled Changes (1.07ms)
+2026-03-09T18:43:26.554Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:43:26.554Z [DEBUG]   Computing Checksums: 0.92ms
+2026-03-09T18:43:26.554Z [DEBUG]   Diffing: 0.13ms (0.13ms saving cached data)
+2026-03-09T18:46:20.916Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:46:21.217Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:46:21.217Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build.c
+2026-03-09T18:46:21.218Z [INFO ] Reconciled Changes (1.28ms)
+2026-03-09T18:46:21.218Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:46:21.218Z [DEBUG]   Computing Checksums: 1.12ms
+2026-03-09T18:46:21.218Z [DEBUG]   Diffing: 0.14ms (0.14ms saving cached data)
+2026-03-09T18:46:33.245Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T18:46:33.245Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T18:46:33.282Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:46:33.596Z [DEBUG] Reconciling 2 paths
+2026-03-09T18:46:33.596Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:46:33.596Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T18:46:33.596Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T18:46:33.596Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:46:33.596Z [DEBUG] Cancelling reconcile after 0.000032s
+2026-03-09T18:46:33.897Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:46:33.897Z [DEBUG] Reconciling everything...
+2026-03-09T18:46:33.899Z [INFO ] Reconciled Changes (1.23ms)
+2026-03-09T18:46:33.899Z [DEBUG]   Rebuild Files: 0.33ms (0.00ms loading cached data)
+2026-03-09T18:46:33.899Z [DEBUG]   Computing Checksums: 0.80ms
+2026-03-09T18:46:33.899Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T18:46:35.938Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old' changed: MOVED | MOVED_TO
+2026-03-09T18:46:35.938Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build' changed: MOVED | MOVED_FROM
+2026-03-09T18:46:36.005Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/run_build' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:46:36.155Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json' changed: MOVED | MOVED_TO
+2026-03-09T18:46:36.456Z [DEBUG] Reconciling 3 paths
+2026-03-09T18:46:36.456Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/run_build
+2026-03-09T18:46:36.456Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old
+2026-03-09T18:46:36.456Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/run_build.old
+2026-03-09T18:46:36.456Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T18:46:36.456Z [DEBUG] Cancelling reconcile after 0.000045s
+2026-03-09T18:46:36.757Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T18:46:36.757Z [DEBUG] Reconciling everything...
+2026-03-09T18:46:36.759Z [INFO ] Reconciled Changes (1.45ms)
+2026-03-09T18:46:36.759Z [DEBUG]   Rebuild Files: 0.31ms (0.00ms loading cached data)
+2026-03-09T18:46:36.759Z [DEBUG]   Computing Checksums: 1.05ms
+2026-03-09T18:46:36.759Z [DEBUG]   Diffing: 0.09ms (0.07ms saving cached data)
+2026-03-09T18:46:40.188Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T18:46:40.488Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:46:40.488Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T18:46:40.489Z [INFO ] Reconciled Changes (1.02ms)
+2026-03-09T18:46:40.489Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:46:40.489Z [DEBUG]   Computing Checksums: 0.91ms
+2026-03-09T18:46:40.489Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T18:46:41.374Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build/game_of_life' changed: ADDED
+2026-03-09T18:46:41.392Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/build/game_of_life' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T18:46:41.692Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/build/game_of_life
+2026-03-09T18:46:41.692Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/build/game_of_life
+2026-03-09T18:46:41.693Z [INFO ] Reconciled Changes (0.94ms)
+2026-03-09T18:46:41.693Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:46:41.693Z [DEBUG]   Computing Checksums: 0.83ms
+2026-03-09T18:46:41.693Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T18:46:42.562Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json' changed: MOVED | MOVED_TO
+2026-03-09T18:46:42.863Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T18:46:42.863Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T18:46:42.864Z [INFO ] Reconciled Changes (0.89ms)
+2026-03-09T18:46:42.864Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T18:46:42.864Z [DEBUG]   Computing Checksums: 0.79ms
+2026-03-09T18:46:42.864Z [DEBUG]   Diffing: 0.07ms (0.07ms saving cached data)
+2026-03-09T21:43:43.422Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main' changed: ADDED | MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T21:43:43.723Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main
+2026-03-09T21:43:43.723Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main
+2026-03-09T21:43:43.724Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T21:43:43.724Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T21:43:43.724Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T21:43:43.724Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T22:16:08.670Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/tags' changed: ADDED | MODIFIED
+2026-03-09T22:16:08.971Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/tags
+2026-03-09T22:16:08.971Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/tags
+2026-03-09T22:16:08.972Z [INFO ] Reconciled Changes (1.01ms)
+2026-03-09T22:16:08.972Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:16:08.972Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T22:16:08.972Z [DEBUG]   Diffing: 0.11ms (0.10ms saving cached data)
+2026-03-09T22:17:47.089Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:17:47.390Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:17:47.390Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:17:47.391Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T22:17:47.391Z [DEBUG]   Rebuild Files: 0.03ms (0.00ms loading cached data)
+2026-03-09T22:17:47.391Z [DEBUG]   Computing Checksums: 0.90ms
+2026-03-09T22:17:47.391Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:17:52.561Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T22:17:52.561Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:17:52.594Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:17:52.896Z [DEBUG] Reconciling 2 paths
+2026-03-09T22:17:52.896Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:17:52.896Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:17:52.896Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:17:52.896Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:17:52.896Z [DEBUG] Cancelling reconcile after 0.000046s
+2026-03-09T22:17:53.197Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:17:53.197Z [DEBUG] Reconciling everything...
+2026-03-09T22:17:53.199Z [INFO ] Reconciled Changes (1.60ms)
+2026-03-09T22:17:53.199Z [DEBUG]   Rebuild Files: 0.33ms (0.00ms loading cached data)
+2026-03-09T22:17:53.199Z [DEBUG]   Computing Checksums: 1.18ms
+2026-03-09T22:17:53.199Z [DEBUG]   Diffing: 0.09ms (0.07ms saving cached data)
+2026-03-09T22:18:19.214Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T22:18:19.214Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:18:19.231Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:18:19.532Z [DEBUG] Reconciling 2 paths
+2026-03-09T22:18:19.532Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:18:19.532Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:18:19.532Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:18:19.532Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:18:19.532Z [DEBUG] Cancelling reconcile after 0.000036s
+2026-03-09T22:18:19.833Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:18:19.833Z [DEBUG] Reconciling everything...
+2026-03-09T22:18:19.834Z [INFO ] Reconciled Changes (1.24ms)
+2026-03-09T22:18:19.834Z [DEBUG]   Rebuild Files: 0.34ms (0.00ms loading cached data)
+2026-03-09T22:18:19.834Z [DEBUG]   Computing Checksums: 0.79ms
+2026-03-09T22:18:19.834Z [DEBUG]   Diffing: 0.12ms (0.10ms saving cached data)
+2026-03-09T22:18:41.467Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json' changed: REMOVED
+2026-03-09T22:18:41.768Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T22:18:41.768Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/compile_commands.json
+2026-03-09T22:18:41.768Z [INFO ] Reconciled Changes (0.12ms)
+2026-03-09T22:18:41.768Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:18:41.768Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T22:18:41.768Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:18:46.403Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:18:46.705Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:18:46.705Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:18:46.706Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T22:18:46.706Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:18:46.706Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T22:18:46.706Z [DEBUG]   Diffing: 0.11ms (0.10ms saving cached data)
+2026-03-09T22:18:57.128Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/clangd/index/main.c.6C71102C043D2A41.idx' changed: REMOVED
+2026-03-09T22:18:57.128Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/' changed: REMOVED
+2026-03-09T22:18:57.128Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/clangd/' changed: REMOVED
+2026-03-09T22:18:57.128Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/.cache/clangd/index/' changed: REMOVED
+2026-03-09T22:18:57.429Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/.cache/
+2026-03-09T22:18:57.429Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/.cache/
+2026-03-09T22:18:57.429Z [INFO ] Reconciled Changes (0.10ms)
+2026-03-09T22:18:57.429Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:18:57.429Z [DEBUG]   Computing Checksums: 0.00ms
+2026-03-09T22:18:57.429Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T22:20:12.313Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/tags' changed: MODIFIED
+2026-03-09T22:20:12.614Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/tags
+2026-03-09T22:20:12.614Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/tags
+2026-03-09T22:20:12.615Z [INFO ] Reconciled Changes (0.93ms)
+2026-03-09T22:20:12.615Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:20:12.615Z [DEBUG]   Computing Checksums: 0.82ms
+2026-03-09T22:20:12.615Z [DEBUG]   Diffing: 0.10ms (0.10ms saving cached data)
+2026-03-09T22:21:26.213Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:21:26.514Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:26.514Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:26.515Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T22:21:26.515Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:21:26.515Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T22:21:26.515Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T22:21:35.816Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:21:36.117Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:36.117Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:36.118Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T22:21:36.118Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:21:36.118Z [DEBUG]   Computing Checksums: 0.90ms
+2026-03-09T22:21:36.118Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T22:21:53.012Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:21:53.313Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:53.313Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:21:53.314Z [INFO ] Reconciled Changes (1.01ms)
+2026-03-09T22:21:53.314Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:21:53.314Z [DEBUG]   Computing Checksums: 0.89ms
+2026-03-09T22:21:53.314Z [DEBUG]   Diffing: 0.10ms (0.10ms saving cached data)
+2026-03-09T22:22:00.306Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:22:00.606Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:22:00.606Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:22:00.607Z [INFO ] Reconciled Changes (0.98ms)
+2026-03-09T22:22:00.607Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:22:00.607Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T22:22:00.607Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:25:26.117Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:25:26.419Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:25:26.419Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:25:26.420Z [INFO ] Reconciled Changes (1.34ms)
+2026-03-09T22:25:26.420Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:25:26.420Z [DEBUG]   Computing Checksums: 1.19ms
+2026-03-09T22:25:26.420Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T22:33:50.568Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED
+2026-03-09T22:33:50.869Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:33:50.869Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:33:50.870Z [INFO ] Reconciled Changes (1.08ms)
+2026-03-09T22:33:50.870Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:33:50.870Z [DEBUG]   Computing Checksums: 0.92ms
+2026-03-09T22:33:50.870Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T22:33:58.244Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED
+2026-03-09T22:33:58.545Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:33:58.545Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:33:58.546Z [INFO ] Reconciled Changes (0.98ms)
+2026-03-09T22:33:58.546Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:33:58.546Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T22:33:58.546Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:34:28.512Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED
+2026-03-09T22:34:28.813Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:34:28.813Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:34:28.814Z [INFO ] Reconciled Changes (1.06ms)
+2026-03-09T22:34:28.814Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:34:28.814Z [DEBUG]   Computing Checksums: 0.93ms
+2026-03-09T22:34:28.814Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:38:59.949Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | REMOVED
+2026-03-09T22:39:00.250Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:39:00.250Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:39:00.251Z [INFO ] Reconciled Changes (1.14ms)
+2026-03-09T22:39:00.251Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:39:00.251Z [DEBUG]   Computing Checksums: 0.98ms
+2026-03-09T22:39:00.251Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T22:42:26.274Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: MODIFIED
+2026-03-09T22:42:26.575Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:42:26.575Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:42:26.576Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T22:42:26.576Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:42:26.576Z [DEBUG]   Computing Checksums: 0.90ms
+2026-03-09T22:42:26.576Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T22:42:30.756Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_string.h' changed: MODIFIED
+2026-03-09T22:42:31.057Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_string.h
+2026-03-09T22:42:31.057Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_string.h
+2026-03-09T22:42:31.058Z [INFO ] Reconciled Changes (0.97ms)
+2026-03-09T22:42:31.058Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:42:31.058Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T22:42:31.058Z [DEBUG]   Diffing: 0.10ms (0.09ms saving cached data)
+2026-03-09T22:43:01.926Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T22:43:02.228Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:43:02.228Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:43:02.229Z [INFO ] Reconciled Changes (1.47ms)
+2026-03-09T22:43:02.229Z [DEBUG]   Rebuild Files: 0.06ms (0.00ms loading cached data)
+2026-03-09T22:43:02.229Z [DEBUG]   Computing Checksums: 1.28ms
+2026-03-09T22:43:02.229Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T22:43:40.422Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T22:43:40.440Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T22:43:40.740Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T22:43:40.740Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T22:43:40.741Z [INFO ] Reconciled Changes (1.01ms)
+2026-03-09T22:43:40.741Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:43:40.741Z [DEBUG]   Computing Checksums: 0.87ms
+2026-03-09T22:43:40.741Z [DEBUG]   Diffing: 0.13ms (0.12ms saving cached data)
+2026-03-09T22:43:56.209Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T22:43:56.510Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:43:56.510Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:43:56.510Z [INFO ] Reconciled Changes (0.91ms)
+2026-03-09T22:43:56.510Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:43:56.510Z [DEBUG]   Computing Checksums: 0.73ms
+2026-03-09T22:43:56.510Z [DEBUG]   Diffing: 0.16ms (0.16ms saving cached data)
+2026-03-09T22:44:22.129Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T22:44:22.430Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:44:22.430Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:44:22.431Z [INFO ] Reconciled Changes (1.09ms)
+2026-03-09T22:44:22.431Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:44:22.431Z [DEBUG]   Computing Checksums: 0.96ms
+2026-03-09T22:44:22.431Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:44:26.527Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T22:44:26.828Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T22:44:26.828Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T22:44:26.829Z [INFO ] Reconciled Changes (0.95ms)
+2026-03-09T22:44:26.829Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:44:26.829Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T22:44:26.829Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T22:45:07.632Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: MODIFIED
+2026-03-09T22:45:07.933Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:45:07.933Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:45:07.934Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T22:45:07.934Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:45:07.934Z [DEBUG]   Computing Checksums: 0.91ms
+2026-03-09T22:45:07.934Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:45:14.505Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T22:45:14.806Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:45:14.806Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:45:14.807Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T22:45:14.807Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:45:14.807Z [DEBUG]   Computing Checksums: 0.93ms
+2026-03-09T22:45:14.807Z [DEBUG]   Diffing: 0.10ms (0.09ms saving cached data)
+2026-03-09T22:45:17.532Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_string.h' changed: MODIFIED
+2026-03-09T22:45:17.833Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_string.h
+2026-03-09T22:45:17.833Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_string.h
+2026-03-09T22:45:17.834Z [INFO ] Reconciled Changes (0.99ms)
+2026-03-09T22:45:17.834Z [DEBUG]   Rebuild Files: 0.01ms (0.00ms loading cached data)
+2026-03-09T22:45:17.834Z [DEBUG]   Computing Checksums: 0.89ms
+2026-03-09T22:45:17.834Z [DEBUG]   Diffing: 0.09ms (0.09ms saving cached data)
+2026-03-09T22:45:37.833Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_string.h' changed: MODIFIED
+2026-03-09T22:45:37.833Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: MODIFIED
+2026-03-09T22:45:37.833Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: MODIFIED
+2026-03-09T22:45:37.833Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.c' changed: MODIFIED
+2026-03-09T22:45:38.134Z [DEBUG] Reconciling 4 paths
+2026-03-09T22:45:38.134Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:45:38.134Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:45:38.134Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.c
+2026-03-09T22:45:38.134Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_string.h
+2026-03-09T22:45:38.135Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T22:45:38.135Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:45:38.135Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T22:45:38.135Z [DEBUG]   Diffing: 0.10ms (0.09ms saving cached data)
+2026-03-09T22:46:25.091Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:46:25.392Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:25.392Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:25.393Z [INFO ] Reconciled Changes (1.09ms)
+2026-03-09T22:46:25.393Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:46:25.393Z [DEBUG]   Computing Checksums: 0.98ms
+2026-03-09T22:46:25.393Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T22:46:25.693Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:46:25.994Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:25.994Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:25.995Z [INFO ] Reconciled Changes (1.08ms)
+2026-03-09T22:46:25.995Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:46:25.995Z [DEBUG]   Computing Checksums: 0.95ms
+2026-03-09T22:46:25.995Z [DEBUG]   Diffing: 0.11ms (0.10ms saving cached data)
+2026-03-09T22:46:40.938Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:46:41.239Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:41.239Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:46:41.240Z [INFO ] Reconciled Changes (1.02ms)
+2026-03-09T22:46:41.240Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:46:41.240Z [DEBUG]   Computing Checksums: 0.89ms
+2026-03-09T22:46:41.240Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:47:56.625Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T22:47:56.625Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:47:56.643Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:47:56.943Z [DEBUG] Reconciling 2 paths
+2026-03-09T22:47:56.943Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:47:56.943Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:47:56.943Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:47:56.943Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:47:56.943Z [DEBUG] Cancelling reconcile after 0.00004s
+2026-03-09T22:47:57.244Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:47:57.244Z [DEBUG] Reconciling everything...
+2026-03-09T22:47:57.246Z [INFO ] Reconciled Changes (1.44ms)
+2026-03-09T22:47:57.246Z [DEBUG]   Rebuild Files: 0.28ms (0.00ms loading cached data)
+2026-03-09T22:47:57.246Z [DEBUG]   Computing Checksums: 1.05ms
+2026-03-09T22:47:57.246Z [DEBUG]   Diffing: 0.12ms (0.10ms saving cached data)
+2026-03-09T22:49:30.525Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:49:30.826Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:49:30.826Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:49:30.827Z [INFO ] Reconciled Changes (1.02ms)
+2026-03-09T22:49:30.827Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:49:30.827Z [DEBUG]   Computing Checksums: 0.85ms
+2026-03-09T22:49:30.827Z [DEBUG]   Diffing: 0.15ms (0.14ms saving cached data)
+2026-03-09T22:49:53.095Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T22:49:53.095Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:49:53.129Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:49:53.129Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_arena.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:49:53.430Z [DEBUG] Reconciling 3 paths
+2026-03-09T22:49:53.430Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_arena.h
+2026-03-09T22:49:53.430Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:49:53.430Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:49:53.430Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:49:53.430Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:49:53.430Z [DEBUG] Cancelling reconcile after 0.000043s
+2026-03-09T22:49:53.731Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:49:53.731Z [DEBUG] Reconciling everything...
+2026-03-09T22:49:53.732Z [INFO ] Reconciled Changes (1.23ms)
+2026-03-09T22:49:53.732Z [DEBUG]   Rebuild Files: 0.27ms (0.00ms loading cached data)
+2026-03-09T22:49:53.732Z [DEBUG]   Computing Checksums: 0.84ms
+2026-03-09T22:49:53.732Z [DEBUG]   Diffing: 0.12ms (0.11ms saving cached data)
+2026-03-09T22:50:13.842Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h~' changed: MOVED | MOVED_TO
+2026-03-09T22:50:13.842Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:50:13.859Z [DEBUG] Path '/home/myt/Documents/AbdulLib/base/base_core.h' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:50:14.159Z [DEBUG] Reconciling 2 paths
+2026-03-09T22:50:14.159Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h
+2026-03-09T22:50:14.159Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/base/base_core.h~
+2026-03-09T22:50:14.159Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/base/base_core.h~
+2026-03-09T22:50:14.159Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:50:14.159Z [DEBUG] Cancelling reconcile after 0.000026s
+2026-03-09T22:50:14.461Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:50:14.461Z [DEBUG] Reconciling everything...
+2026-03-09T22:50:14.463Z [INFO ] Reconciled Changes (1.15ms)
+2026-03-09T22:50:14.463Z [DEBUG]   Rebuild Files: 0.27ms (0.00ms loading cached data)
+2026-03-09T22:50:14.463Z [DEBUG]   Computing Checksums: 0.79ms
+2026-03-09T22:50:14.463Z [DEBUG]   Diffing: 0.08ms (0.07ms saving cached data)
+2026-03-09T22:50:41.492Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:50:41.793Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:50:41.793Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:50:41.794Z [INFO ] Reconciled Changes (1.04ms)
+2026-03-09T22:50:41.794Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:50:41.794Z [DEBUG]   Computing Checksums: 0.89ms
+2026-03-09T22:50:41.794Z [DEBUG]   Diffing: 0.14ms (0.13ms saving cached data)
+2026-03-09T22:50:53.939Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:50:54.240Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:50:54.240Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:50:54.241Z [INFO ] Reconciled Changes (0.99ms)
+2026-03-09T22:50:54.241Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:50:54.241Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T22:50:54.241Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T22:51:06.116Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:51:06.417Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:51:06.417Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:51:06.418Z [INFO ] Reconciled Changes (1.00ms)
+2026-03-09T22:51:06.418Z [DEBUG]   Rebuild Files: 0.02ms (0.00ms loading cached data)
+2026-03-09T22:51:06.418Z [DEBUG]   Computing Checksums: 0.88ms
+2026-03-09T22:51:06.418Z [DEBUG]   Diffing: 0.11ms (0.10ms saving cached data)
+2026-03-09T22:51:07.789Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c~' changed: MOVED | MOVED_TO
+2026-03-09T22:51:07.789Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM
+2026-03-09T22:51:07.806Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: MODIFIED | ATTRIBUTES_CHANGED
+2026-03-09T22:51:08.107Z [DEBUG] Reconciling 2 paths
+2026-03-09T22:51:08.107Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:51:08.107Z [DEBUG] Reconciling path /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:51:08.107Z [DEBUG] Couldn't process file /home/myt/Documents/AbdulLib/examples/game_of_life/main.c~
+2026-03-09T22:51:08.107Z [DEBUG] Needs restart reconcile: {"/home/nafonso/dev/ark/src/Ark_Client.jai", 3586, 43}
+2026-03-09T22:51:08.107Z [DEBUG] Cancelling reconcile after 0.000028s
+2026-03-09T22:51:08.408Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/
+2026-03-09T22:51:08.408Z [DEBUG] Reconciling everything...
+2026-03-09T22:51:08.409Z [INFO ] Reconciled Changes (1.16ms)
+2026-03-09T22:51:08.409Z [DEBUG]   Rebuild Files: 0.27ms (0.00ms loading cached data)
+2026-03-09T22:51:08.409Z [DEBUG]   Computing Checksums: 0.80ms
+2026-03-09T22:51:08.409Z [DEBUG]   Diffing: 0.09ms (0.08ms saving cached data)
+2026-03-09T22:51:41.015Z [DEBUG] Path '/home/myt/Documents/AbdulLib/examples/game_of_life/main.c' changed: ADDED | MODIFIED | MOVED | MOVED_FROM | ATTRIBUTES_CHANGED
+2026-03-09T22:51:41.316Z [DEBUG] Reconciling /home/myt/Documents/AbdulLib/examples/game_of_life/main.c
+2026-03-09T22:51:41.316Z [DEBUG] Reconciling path /home/m
