@@ -121,10 +121,12 @@ ALibStruct(TermData) {
     U64 screen_height;
 };
 
+
+
 void term_setup(TermData *td, struct winsize *ws, Arena *arena) {
     td->screen_width = ws->ws_col;
     td->screen_height = ws->ws_row;
-
+    
     td->board_size = (td->screen_height * td->screen_width);
     td->frame_buffer_size = 3 + td->board_size;
     td->frame_buffer = push_array(arena, char, td->frame_buffer_size);
@@ -182,19 +184,20 @@ int main(int argc, char **argv) {
                         (old_width < td.screen_width) ? old_width : td.screen_width;
                     U64 copy_height =
                         (old_height < td.screen_height) ? old_height : td.screen_height;
-                    for
-                        EachIndex(y, copy_height) {
-                            for
-                                EachIndex(x, copy_width) {
-                                    td.board[Pos(x, y, td.screen_width)] =
-                                        old_board[Pos(x, y, old_width)];
-                                }
-                        }
 
-                    if (cx >= td.screen_width)
+                    for EachIndex(y, copy_height) {
+                        for EachIndex(x, copy_width) {
+                            td.board[Pos(x, y, td.screen_width)] =
+                                old_board[Pos(x, y, old_width)];
+                        }
+                    }
+
+                    if (cx >= td.screen_width) {
                         cx = td.screen_width - 1;
-                    if (cy >= td.screen_height - 1)
+                    }
+                    if (cy >= td.screen_height - 1) {
                         cy = td.screen_height - 2;
+                    }
 
                     write(STDOUT_FILENO, CLEAR_SCREEN, 4);
                 }
@@ -242,41 +245,37 @@ int main(int argc, char **argv) {
             }
 
             if (is_simulating && frame_count % sim_interval == 0) { // game of life
-                for
-                    EachIndex(y, td.screen_height) {
-                        for
-                            EachIndex(x, td.screen_width) {
-                                U64 i = Pos(x, y, td.screen_width);
-                                U8 alive_count = get_alive_neighbors(td.board + i, x, y,
-                                        td.screen_width,
-                                        td.screen_height);
-                                if (td.board[i] == '#') {
-                                    if (alive_count < 2 || 3 < alive_count)
-                                        td.next_board[i] = ' ';
-                                    if (alive_count == 2 || 3 == alive_count)
-                                        td.next_board[i] = '#';
-                                }
-                                if (td.board[i] == ' ') {
-                                    if (alive_count != 3)
-                                        td.next_board[i] = ' ';
-                                    if (alive_count == 3)
-                                        td.next_board[i] = '#';
-                                }
-                            }
+                for EachIndex(y, td.screen_height) {
+                    for EachIndex(x, td.screen_width) {
+                        U64 i = Pos(x, y, td.screen_width);
+                        U8 alive_count = get_alive_neighbors(td.board + i, x, y,
+                                td.screen_width,
+                                td.screen_height);
+                        if (td.board[i] == '#') {
+                            if (alive_count < 2 || 3 < alive_count)
+                                td.next_board[i] = ' ';
+                            if (alive_count == 2 || 3 == alive_count)
+                                td.next_board[i] = '#';
+                        }
+                        if (td.board[i] == ' ') {
+                            if (alive_count != 3)
+                                td.next_board[i] = ' ';
+                            if (alive_count == 3)
+                                td.next_board[i] = '#';
+                        }
                     }
+                }
                 char *tmp = td.board;
                 td.board = td.next_board;
                 td.next_board = tmp;
             }
 
-            for
-                EachIndex(y, td.screen_height) {
-                    for
-                        EachIndex(x, td.screen_width) {
-                            td.frame_buffer[FrameBufferPos(x, y, td.screen_width)] =
-                                td.board[Pos(x, y, td.screen_width)];
-                        }
+            for EachIndex(y, td.screen_height) {
+                for EachIndex(x, td.screen_width) {
+                    td.frame_buffer[FrameBufferPos(x, y, td.screen_width)] =
+                        td.board[Pos(x, y, td.screen_width)];
                 }
+            }
 
             td.frame_buffer[FrameBufferPos(cx, cy, td.screen_width)] = '@';
             if (animate_toggle) {
@@ -287,12 +286,9 @@ int main(int argc, char **argv) {
             }
 
             char *pause_state = !is_simulating ? "Play " : "Pause";
-            memcpy(td.frame_buffer +
-                    FrameBufferPos(0, td.screen_height - 1, td.screen_width),
+            memcpy(td.frame_buffer + FrameBufferPos(0, td.screen_height - 1, td.screen_width),
                     "WASD/HJKL: Move | Q: Exit | E: Place | P: ", 42);
-            memcpy(td.frame_buffer + FrameBufferPos(42, td.screen_height - 1,
-                        td.screen_width),
-                    pause_state, 6);
+            memcpy(td.frame_buffer + FrameBufferPos(42, td.screen_height - 1, td.screen_width), pause_state, 6);
             write(STDOUT_FILENO, td.frame_buffer, td.frame_buffer_size);
         }
 
