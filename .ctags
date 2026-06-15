@@ -1,0 +1,12 @@
+--languages=C,C++
+--langmap=C:+.h
+
+--regex-C=/^[ \t]*ALibTypedef\([^,]+,[ \t]*([A-Za-z_][A-Za-z0-9_]*)[ \t]*\)/\1/t,typedef/
+--regex-C=/^[ \t]*ALibStructForward\(([A-Za-z_][A-Za-z0-9_]*)\)/\1/t,typedef/
+--regex-C=/^[ \t]*ALibUnionForward\(([A-Za-z_][A-Za-z0-9_]*)\)/\1/t,typedef/
+
+--regex-C=/^[ \t]*ALibStruct\(([A-Za-z_][A-Za-z0-9_]*)\)/\1/s,struct/
+--regex-C=/^[ \t]*ALibUnion\(([A-Za-z_][A-Za-z0-9_]*)\)/\1/u,union/
+
+--regex-C=/^[ \t]*ALibEnum\(([A-Za-z_][A-Za-z0-9_]*)[ \t]*,[^)]*\)/\1/g,enum/
+--regex-C=/^[ \t]*ALibEnum\(([A-Za-z_][A-Za-z0-9_]*)[ \t]*,[^)]*\)/\1/t,typedef/

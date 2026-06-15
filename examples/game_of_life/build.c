@@ -22,8 +22,7 @@ int main(int argc, char **argv) {
     nob_cc_output(&cmd, BUILD_FOLDER OUT_FILE);
 
     // example_1
-    if (!nob_cmd_run(&cmd))
-        return 1;
+    if (!nob_cmd_run(&cmd)) return 1;
 
     nob_cmd_append(&cmd, BUILD_FOLDER OUT_FILE);
 
