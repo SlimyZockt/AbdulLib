@@ -2,7 +2,7 @@
 #define NOB_EXPERIMENTAL_DELETE_OLD
 #include "../../vendored/nob.h"
 
-#define BUILD_FOLDER "build/"
+#define BUILD_FOLDER "dist/"
 #define SRC_FOLDER ""
 
 #define OUT_FILE "game_of_life"
@@ -22,13 +22,8 @@ int main(int argc, char **argv) {
     nob_cc_output(&cmd, BUILD_FOLDER OUT_FILE);
 
     // example_1
-    if (!nob_cmd_run(&cmd)) return 1;
-
-    nob_cmd_append(&cmd, BUILD_FOLDER OUT_FILE);
-
-    if (!nob_cmd_run(&cmd)) {
+    if (!nob_cmd_run(&cmd))
         return 1;
-    }
 
     return 0;
 }

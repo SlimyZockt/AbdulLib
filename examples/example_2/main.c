@@ -6,8 +6,8 @@
 #include <termios.h>
 #include <time.h>
 
-#include "../../base/base_inc.c"
 #include "../../base/base_inc.h"
+#include "../../base/base_inc.c"
 
 Arena *g_arena = NULL;
 

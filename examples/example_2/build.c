@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
   nob_cc(&cmd);
   nob_cmd_append(&cmd, "-std=c11", "-g", "-Wno-initializer-overrides");
   // nob_cc_flags(&cmd);
-  nob_cc_inputs(&cmd, SRC_FOLDER "example_2.c");
+  nob_cc_inputs(&cmd, SRC_FOLDER "main.c");
   nob_cc_output(&cmd, BUILD_FOLDER OUT_FILE);
 
   // example_1

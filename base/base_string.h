@@ -1,33 +1,25 @@
 #ifndef ALib_BASE_STRING_H
 #define ALib_BASE_STRING_H
 
-#if ALIB_BASE_STRING_STRIP_PREFIX 
-#define printfln_array ALibPrintfln_array
-#define printfln ALibPrintfln
-#define printfln ALibPrintfln
-#define Str ALibStr
-#define String ALibString
-
-#endif
-
 #include <stdio.h>
 
-#define ALibPrintfln_array(fstr, arr, count)    \
-    ALibStatement(                              \
+#define Printfln_array(fstr, arr, count)    \
+    Statement(                              \
         printf("[");                            \
-            for ALibEachIndex(it, (count)) {    \
+            for EachIndex(it, (count)) {    \
                 printf((fstr), (arr)[it]);      \
                 printf(", ");                   \
             }                                   \
         printf("]\n");                          \
     )
 
-#define ALibPrintfln(str, ...) printf(str "\n", ##__VA_ARGS__)
-#define ALibStr(str) ((ALibString){(str), ALibArrayCount((str))})
+#define printfln(str, ...) printf(str "\n", ##__VA_ARGS__)
+#define Str(str) ((String){(str), ArrayCount((str))})
 
-ALibStruct(ALibString) {
+ALibStruct(String) {
     const char *data;
-    ALibU64  *len;
+    U64 *len;
 };
+
 
 #endif

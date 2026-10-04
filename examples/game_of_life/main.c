@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE 199309L
-#define ALIB_BASE_INC_STRIP_PREFIX 1
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/ioctl.h>
@@ -19,7 +19,7 @@
 #define Pos(x, y, w) (((x)) + ((y) * w))
 #define FrameBufferPos(x, y, w) Pos((x) + 3, y, w)
 
-ALibEnum(Key, U8){
+ALibEnum(Key, U8) {
     KEY_NONE = 0,
     KEY_UP = 1,
     KEY_DOWN = 2,
@@ -122,11 +122,10 @@ ALibStruct(TermData) {
 };
 
 
-
 void term_setup(TermData *td, struct winsize *ws, Arena *arena) {
     td->screen_width = ws->ws_col;
     td->screen_height = ws->ws_row;
-    
+
     td->board_size = (td->screen_height * td->screen_width);
     td->frame_buffer_size = 3 + td->board_size;
     td->frame_buffer = push_array(arena, char, td->frame_buffer_size);
@@ -169,7 +168,8 @@ int main(int argc, char **argv) {
     const U64 animaion_dur = 15;
 
     for (;;) {
-        if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1) { // Resize Term
+        if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) != -1) {
+            // Resize Term
             if (ws.ws_col != td.screen_width || ws.ws_row != td.screen_height) {
                 Temp temp = {0};
                 DeferLoop(temp = temp_begin(g_arena), temp_end(temp)) {
@@ -181,14 +181,14 @@ int main(int argc, char **argv) {
                     term_setup(&td, &ws, term_arena);
 
                     U64 copy_width =
-                        (old_width < td.screen_width) ? old_width : td.screen_width;
+                            (old_width < td.screen_width) ? old_width : td.screen_width;
                     U64 copy_height =
-                        (old_height < td.screen_height) ? old_height : td.screen_height;
+                            (old_height < td.screen_height) ? old_height : td.screen_height;
 
                     for EachIndex(y, copy_height) {
                         for EachIndex(x, copy_width) {
                             td.board[Pos(x, y, td.screen_width)] =
-                                old_board[Pos(x, y, old_width)];
+                                    old_board[Pos(x, y, old_width)];
                         }
                     }
 
@@ -225,7 +225,7 @@ int main(int argc, char **argv) {
                 if (cx < td.screen_width - 1)
                     cx += 1;
                 break;
-                // case KEY_PLACE: if(!is_simulating) should_toggle_tile = 1; break;
+            // case KEY_PLACE: if(!is_simulating) should_toggle_tile = 1; break;
             case KEY_PLACE:
                 should_toggle_tile = 1;
                 break;
@@ -236,21 +236,23 @@ int main(int argc, char **argv) {
                 break;
         }
 
-        { // draw cursor
+        {
+            // draw cursor
             if (should_toggle_tile) {
                 should_toggle_tile = 0;
                 td.board[Pos(cx, cy, td.screen_width)] =
-                    td.board[Pos(cx, cy, td.screen_width)] == '#' ? ' ' : '#';
+                        td.board[Pos(cx, cy, td.screen_width)] == '#' ? ' ' : '#';
                 animate_toggle = 1;
             }
 
-            if (is_simulating && frame_count % sim_interval == 0) { // game of life
+            if (is_simulating && frame_count % sim_interval == 0) {
+                // game of life
                 for EachIndex(y, td.screen_height) {
                     for EachIndex(x, td.screen_width) {
                         U64 i = Pos(x, y, td.screen_width);
                         U8 alive_count = get_alive_neighbors(td.board + i, x, y,
-                                td.screen_width,
-                                td.screen_height);
+                                                             td.screen_width,
+                                                             td.screen_height);
                         if (td.board[i] == '#') {
                             if (alive_count < 2 || 3 < alive_count)
                                 td.next_board[i] = ' ';
@@ -273,7 +275,7 @@ int main(int argc, char **argv) {
             for EachIndex(y, td.screen_height) {
                 for EachIndex(x, td.screen_width) {
                     td.frame_buffer[FrameBufferPos(x, y, td.screen_width)] =
-                        td.board[Pos(x, y, td.screen_width)];
+                            td.board[Pos(x, y, td.screen_width)];
                 }
             }
 
@@ -287,7 +289,7 @@ int main(int argc, char **argv) {
 
             char *pause_state = !is_simulating ? "Play " : "Pause";
             memcpy(td.frame_buffer + FrameBufferPos(0, td.screen_height - 1, td.screen_width),
-                    "WASD/HJKL: Move | Q: Exit | E: Place | P: ", 42);
+                   "WASD/HJKL: Move | Q: Exit | E: Place | P: ", 42);
             memcpy(td.frame_buffer + FrameBufferPos(42, td.screen_height - 1, td.screen_width), pause_state, 6);
             write(STDOUT_FILENO, td.frame_buffer, td.frame_buffer_size);
         }
@@ -295,7 +297,7 @@ int main(int argc, char **argv) {
         frame_count += 1;
         nanosleep(&ts, NULL);
         continue;
-exit:
+    exit:
         break;
     }
 }
